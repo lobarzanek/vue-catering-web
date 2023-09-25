@@ -48,6 +48,11 @@ defineProps({
   border-radius: 8px;
   box-shadow: 2px 4px 10px 1px #01111170;
   overflow: hidden;
+  transition: all .3s ease-in-out;
+
+  &:hover{
+    transform: scale(1.15);
+  }
 
   .card-img {
     margin-bottom: 20px;
