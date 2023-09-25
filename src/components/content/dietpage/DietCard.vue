@@ -29,27 +29,33 @@ defineProps({
 
 <template>
   <div class="card">
-    <div class="card-content front-card">
-      <span class="title">{{ title }}</span>
-    </div>
-    <div class="card-content back-card">
-      <span class="description">{{ description }}</span>
-      <span class="mealsCount">{{ mealsCount }}</span>
-      <span class="price">{{ price }}</span>
-      <span class="currency">{{ currency }}</span>
-    </div>
+    <img class="card-img" src="../../../images/card-image150x150.png" alt="" />
+    <span class="title">{{ title }}</span>
+    <span class="description">{{ description }}</span>
+    <span class="mealsCount">{{ mealsCount }}</span>
+    <span class="price">{{ price }} {{ currency }}</span>
   </div>
 </template>
 
 <style scoped lang="scss">
-@import url("https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,400;1,700&display=swap");
 .card {
-  font-family: "Nunito", sans-serif;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   width: 250px;
   height: 350px;
   border-radius: 8px;
   box-shadow: 2px 4px 10px 1px #01111170;
   overflow: hidden;
-  
+
+  .card-img {
+    margin-bottom: 20px;
+  }
+
+  .title {
+    font-size: 22px;
+    font-weight: bold;
+  }
 }
 </style>

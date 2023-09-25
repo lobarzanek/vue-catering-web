@@ -11,6 +11,7 @@ data.value = [
     mealsCount: 5,
     price: 100,
     currency: "PLN",
+    imgSrc: "../../../images/card-image150x150.png",
   },
   {
     id: 2,
@@ -19,6 +20,7 @@ data.value = [
     mealsCount: 5,
     price: 200,
     currency: "PLN",
+    imgSrc: "../../../images/card-image150x150.png",
   },
   {
     id: 3,
@@ -27,13 +29,14 @@ data.value = [
     mealsCount: 5,
     price: 300,
     currency: "PLN",
+    imgSrc: "../../../images/card-image150x150.png",
   },
 ];
 </script>
 
 <template>
   <div class="dietView">
-    <h1>dieta</h1>
+    <h1>Nasze diety:</h1>
     <div class="dietCards">
       <DietCard
         v-for="(item, index) in data"
@@ -42,6 +45,7 @@ data.value = [
         :meals-count="item.mealsCount"
         :price="item.price"
         :currency="item.currency"
+        :imgSrc="item.imgSrc"
         :key="index"
       ></DietCard>
     </div>
@@ -54,6 +58,7 @@ data.value = [
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  padding-top: 20px;
   .dietCards {
     width: 100vw;
     display: flex;
