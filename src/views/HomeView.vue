@@ -4,7 +4,8 @@ import Wrapper from "@/components/content/wrapper/Wrapper.vue";
 import Image from "@/components/content/homepage/Image.vue";
 
 const data = ref([])
-
+/* 
+Example of use "data" 
 data.value = [
   {
     id: 1,
@@ -19,6 +20,7 @@ data.value = [
     img: 'https://triverna.pl/uploads/album_1440/bc2cc816ef1d5bc14a07bbbb9103df3e07617b91.jpg',
   }
 ]
+*/
 </script>
 
 <template>
