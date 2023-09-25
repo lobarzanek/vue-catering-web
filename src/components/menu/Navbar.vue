@@ -33,13 +33,16 @@ header {
 .nav-link {
   color: white;
   text-decoration: none;
+  padding: 10px;
   margin: 0 10px;
 }
 
 .nav-link:hover {
-  background-color: white;
-  color: blue;
+  background-color: rgb(0, 255, 42);
+  color: white;
   padding: 5px 10px;
   border-radius: 5px;
+  transition-duration: 1ms;
+  
 }
 </style>
