@@ -1,6 +1,6 @@
 # inin5_fd1
 
-This template should help get you started developing with Vue 3 in Vite.
+Repo for catering app
 
 ## Recommended IDE Setup
 
