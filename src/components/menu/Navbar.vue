@@ -3,8 +3,9 @@ import { RouterLink } from "vue-router";
 </script>
 <template>
   <header>
+    <img class="logo" src="../../images/logo50x50.png" alt="" />
     <div class="wrapper top-bar">
-      <nav>
+      <nav>  
         <RouterLink to="/" class="nav-link">Home</RouterLink>
         <RouterLink to="/diet" class="nav-link">Diety</RouterLink>
         <RouterLink to="/catering" class="nav-link">Catering</RouterLink>
@@ -17,7 +18,7 @@ import { RouterLink } from "vue-router";
 </template>
 <style scoped lang="scss">
 header {
-  background-color: blue;
+  background-color: white;
   padding: 10px;
   display: flex;
   justify-content: space-between;
@@ -28,10 +29,13 @@ header {
   display: inherit;
   justify-content: center;
   width: 100%;
+  margin-top: 3px;
+  font-size: 20px;
+  padding: 10px;
 }
 
 .nav-link {
-  color: white;
+  color: gray;
   text-decoration: none;
   padding: 10px;
   margin: 0 10px;
@@ -43,6 +47,13 @@ header {
   padding: 5px 10px;
   border-radius: 5px;
   transition-duration: 1ms;
-  
+}
+.logo{
+  float:left;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  position:absolute;
+  margin-left: 25px;
 }
 </style>
