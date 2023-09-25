@@ -1,0 +1,25 @@
+{
+  "diets": [
+    {
+      "id": 1,
+      "title": "Dieta 1500kcal",
+      "description": "dieta dla małych",
+      "mealsCount": 5,
+      "price": "100"
+    },
+    {
+      "id": 2,
+      "title": "Dieta 2000kcal",
+      "description": "dieta dla średnich",
+      "mealsCount": 5,
+      "price": "150"
+    },
+    {
+      "id": 3,
+      "title": "Dieta 2500kcal",
+      "description": "dieta dla dużych",
+      "mealsCount": 5,
+      "price": "200"
+    }
+  ]
+}
