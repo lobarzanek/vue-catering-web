@@ -7,29 +7,32 @@ data.value = [
   {
     id: 1,
     title: "Dieta 1500kcal",
-    description: "dieta dla małych",
+    description: "Dieta dla ludzi o niskiej zawartości kalorycznej",
     mealsCount: 5,
     price: 100,
     currency: "PLN",
-    imgSrc: "../../../images/card-image150x150.png",
+    imgSrc: "src/images/sqr200x200.png",
+    imgAlt: "Ruda wiewiórka",
   },
   {
     id: 2,
     title: "Dieta 2000kcal",
-    description: "dieta dla średnich",
+    description: "Dieta dla leniuszków prowadzących siedzący tryb życia",
     mealsCount: 5,
     price: 200,
     currency: "PLN",
-    imgSrc: "../../../images/card-image150x150.png",
+    imgSrc: "src/images/raccoon200x200.png",
+    imgAlt: "Mały szop",
   },
   {
     id: 3,
     title: "Dieta 2500kcal",
-    description: "dieta dla dużych",
+    description: "Dieta dla aktywnych o dużej zawartości białka",
     mealsCount: 5,
     price: 300,
     currency: "PLN",
-    imgSrc: "../../../images/card-image150x150.png",
+    imgSrc: "src/images/bear200x200.png",
+    imgAlt: "Silny niedźwiedź",
   },
 ];
 </script>
@@ -46,6 +49,7 @@ data.value = [
         :price="item.price"
         :currency="item.currency"
         :imgSrc="item.imgSrc"
+        :imgAlt="item.imgAlt"
         :key="index"
       ></DietCard>
     </div>
