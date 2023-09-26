@@ -43,6 +43,7 @@ data.value = [
     <div class="dietCards">
       <DietCard
         v-for="(item, index) in data"
+        :id="item.id"
         :title="item.title"
         :description="item.description"
         :meals-count="item.mealsCount"

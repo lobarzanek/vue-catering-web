@@ -1,5 +1,8 @@
 <script setup>
 import { RouterLink } from "vue-router";
+import { useCounterStore } from "@/stores/counter";
+
+const addToCard = useCounterStore()
 </script>
 <template>
   <header>
@@ -14,6 +17,7 @@ import { RouterLink } from "vue-router";
         <RouterLink to="/contact" class="nav-link">Kontakt</RouterLink>
       </nav>
     </div>
+    <div> Ilość zamówionych diet: {{addToCard.count}}</div>
   </header>
 </template>
 <style scoped lang="scss">
@@ -42,7 +46,7 @@ header {
 }
 
 .nav-link:hover {
-  background-color: rgb(0, 255, 42);
+  background-color: #26ad60;
   color: white;
   padding: 5px 10px;
   border-radius: 5px;

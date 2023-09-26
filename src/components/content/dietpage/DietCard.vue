@@ -1,5 +1,13 @@
 <script setup>
+
+import { useCounterStore } from "@/stores/counter";
+const addToCard = useCounterStore()
+
 defineProps({
+  id: {
+    type: Number,
+    default: () => "",
+  },
   title: {
     type: String,
     default: () => "",
@@ -43,7 +51,7 @@ defineProps({
     <div>
       Cena: <span class="price"> {{ price }} {{ currency }} / dzień </span>
     </div>
-    <button class="btn-add">Dodaj do koszyka</button>
+    <button @click="() => addToCard.increment(id)" class="btn-add">Dodaj do koszyka</button>
   </div>
 </template>
 
