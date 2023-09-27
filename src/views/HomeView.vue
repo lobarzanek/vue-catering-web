@@ -1,10 +1,10 @@
-<script setup>
+<!-- <script setup>
 import {ref} from "vue";
 import Wrapper from "@/components/content/wrapper/Wrapper.vue";
 import Image from "@/components/content/homepage/Image.vue";
 
-const data = ref([])
-/* 
+//const data = ref([])
+ 
 Example of use "data" 
 data.value = [
   {
@@ -20,15 +20,21 @@ data.value = [
     img: 'https://triverna.pl/uploads/album_1440/bc2cc816ef1d5bc14a07bbbb9103df3e07617b91.jpg',
   }
 ]
-*/
-</script>
 
-<template>
+
+
+</script> 
+
+ <template>
   <wrapper>
     <Image v-for="(item, index) in data" :img-link="item.img" :title="item.title" :price="item.price" :key="index"/>
   </wrapper>
+</template> -->
+
+<template>
+
 </template>
 
-<style scoped>
+<style scoped lang="scss">
 
 </style>

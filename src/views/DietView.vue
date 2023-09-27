@@ -1,37 +1,16 @@
 <script setup>
 import { ref } from "vue";
+import axios from "axios";
 import DietCard from "../components/content/dietpage/DietCard.vue";
 
 const data = ref([]);
-data.value = [
-  {
-    id: 1,
-    title: "Dieta 1500kcal",
-    description: "dieta dla małych",
-    mealsCount: 5,
-    price: 100,
-    currency: "PLN",
-    imgSrc: "../../../images/card-image150x150.png",
-  },
-  {
-    id: 2,
-    title: "Dieta 2000kcal",
-    description: "dieta dla średnich",
-    mealsCount: 5,
-    price: 200,
-    currency: "PLN",
-    imgSrc: "../../../images/card-image150x150.png",
-  },
-  {
-    id: 3,
-    title: "Dieta 2500kcal",
-    description: "dieta dla dużych",
-    mealsCount: 5,
-    price: 300,
-    currency: "PLN",
-    imgSrc: "../../../images/card-image150x150.png",
-  },
-];
+
+const getDietsData = () => {
+  axios.get("http://localhost:3000/diets").then((response) => {
+    data.value = response.data;
+  });
+};
+getDietsData();
 </script>
 
 <template>
@@ -40,12 +19,14 @@ data.value = [
     <div class="dietCards">
       <DietCard
         v-for="(item, index) in data"
+        :id="item.id"
         :title="item.title"
         :description="item.description"
         :meals-count="item.mealsCount"
         :price="item.price"
         :currency="item.currency"
         :imgSrc="item.imgSrc"
+        :imgAlt="item.imgAlt"
         :key="index"
       ></DietCard>
     </div>
