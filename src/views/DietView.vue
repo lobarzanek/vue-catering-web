@@ -1,40 +1,16 @@
 <script setup>
 import { ref } from "vue";
+import axios from "axios";
 import DietCard from "../components/content/dietpage/DietCard.vue";
 
 const data = ref([]);
-data.value = [
-  {
-    id: 1,
-    title: "Dieta 1500kcal",
-    description: "Dieta dla ludzi o niskiej zawartości kalorycznej",
-    mealsCount: 5,
-    price: 100,
-    currency: "PLN",
-    imgSrc: "src/images/sqr200x200.png",
-    imgAlt: "Ruda wiewiórka",
-  },
-  {
-    id: 2,
-    title: "Dieta 2000kcal",
-    description: "Dieta dla leniuszków prowadzących siedzący tryb życia",
-    mealsCount: 5,
-    price: 200,
-    currency: "PLN",
-    imgSrc: "src/images/raccoon200x200.png",
-    imgAlt: "Mały szop",
-  },
-  {
-    id: 3,
-    title: "Dieta 2500kcal",
-    description: "Dieta dla aktywnych o dużej zawartości białka",
-    mealsCount: 5,
-    price: 300,
-    currency: "PLN",
-    imgSrc: "src/images/bear200x200.png",
-    imgAlt: "Silny niedźwiedź",
-  },
-];
+
+const getDietsData = () => {
+  axios.get("http://localhost:3000/diets").then((response) => {
+    data.value = response.data;
+  });
+};
+getDietsData();
 </script>
 
 <template>
