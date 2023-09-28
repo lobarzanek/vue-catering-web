@@ -1,22 +1,28 @@
 <script setup>
 import { ref } from "vue";
 import axios from "axios";
-import AboutCard from "../components/content/aboutpage/aboutCard.vue";
+import AboutCard from "@/components/content/aboutpage/aboutCard.vue";
+import ErrorHandler from "@/components/content/errorHandler/ErrorHandler.vue";
 
 const data = ref([]);
+const eHandler = ref(true);
 
-const getAboutUsData = () => {
+async function getAboutUsData() {
   axios.get("http://localhost:3000/aboutus").then((response) => {
-    console.log(response.data);
-
-    data.value = response.data;
+    if (response.statusText == "OK") {
+      eHandler.value = false;
+      data.value = response.data;
+    }
   });
-};
+}
 getAboutUsData();
 </script>
 
 <template>
-  <div class="aboutview">
+  <div class="errorHandler" v-if="eHandler">
+    <ErrorHandler></ErrorHandler>
+  </div>
+  <div class="aboutview" v-else>
     <h1>o nas</h1>
     <div class="card-container">
       <AboutCard
@@ -54,5 +60,11 @@ getAboutUsData();
     gap: 80px;
     margin-bottom: 40px;
   }
+}
+.errorHandler {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 20px 60px;
 }
 </style>

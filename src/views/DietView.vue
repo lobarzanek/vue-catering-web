@@ -2,19 +2,27 @@
 import { ref } from "vue";
 import axios from "axios";
 import DietCard from "../components/content/dietpage/DietCard.vue";
+import ErrorHandler from "@/components/content/errorHandler/ErrorHandler.vue";
 
 const data = ref([]);
+const eHandler = ref(true);
 
 const getDietsData = () => {
   axios.get("http://localhost:3000/diets").then((response) => {
-    data.value = response.data;
+    if (response.statusText == "OK") {
+      eHandler.value = false;
+      data.value = response.data;
+    }
   });
 };
 getDietsData();
 </script>
 
 <template>
-  <div class="dietView">
+  <div class="errorHandler" v-if="eHandler">
+    <ErrorHandler></ErrorHandler>
+  </div>
+  <div class="dietView" v-else>
     <h1>Nasze diety:</h1>
     <div class="dietCards">
       <DietCard
@@ -50,5 +58,11 @@ getDietsData();
     margin: 30px 0;
     gap: 100px;
   }
+}
+.errorHandler {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 20px 60px;
 }
 </style>
