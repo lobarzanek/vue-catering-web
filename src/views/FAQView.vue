@@ -26,10 +26,12 @@ getFAQData();
     <div class="FAQView" v-else>
       <h1>Frequently Asked Questions:</h1>
       <div class="FAQ">
-        <!-- <FAQ
-        v-for"(item, index) in data"
+        <FAQ
+        v-for="(item, index) in data"
         :id="item.id"
-        ></FAQ> -->
+        :question="item.question"
+        :answer="item.answer"
+        ></FAQ>
       </div>
   </div>
 </template>
