@@ -36,7 +36,7 @@ const toggleClass = () =>{
   <div class="faq" :class="{active: toggle}" @click="toggleClass()">
     <div class="question">
       <h3>{{ question }}</h3>
-      <svg @click="{}" width="15" height="10" viewBox="0 0 42 25">
+      <svg @click="{}" width="40" height="20" viewBox="0 0 42 25">
         <path
           d="M3 3L21 21L39 3"
           stroke="white"
@@ -53,38 +53,45 @@ const toggleClass = () =>{
 
 <style scoped lang="scss">
 .faq{
-    max-width: 700px;
-    margin-top: 2rem;
-    padding-bottom: 1rem;
-    border-bottom: 2px solid white;
+    display: flexbox;
+    width: 100%;
+    border-bottom: 2px solid black;
     cursor: pointer;
-}
-
-.question{
-    display: flex;
-    justify-content: space-between;
+    box-shadow: 2px 4px 10px 1px #01111170;
+    justify-content: center;
+    flex-direction: column;
     align-items: center;
 }
 
+.faq:first-child{
+  margin-top: 2%;
+  border-top: 2px solid black;
+}
+.question{
+    display: flex;
+    align-items: center;
+    padding: 5px;
+}
+
 .question h3{
-    font-size: 1.8rem;
+    font-size: 1.4rem;
 }
 
 .answer{
     max-height: 0;
     overflow: hidden;
-    transition: max-height 1.4s ease;
+    transition: max-height 1s ease;
+    padding: 5px;
 }
 
 .answer p{
-    padding-top: 1rem;
-    line-height: 1.6;
+    line-height: 1.2;
     font-size: 1.4rem;
 }
 
 .faq.active .answer{
     max-height: 300px;
-    animation: fade 1s ease-in-out;
+    animation: fade 0.5s ease-in-out;
 }
 
 .faq.active svg{

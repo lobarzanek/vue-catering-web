@@ -56,13 +56,33 @@
   "faq": [
     {
       "id":1,
-      "question": "a",
-      "answer":"3"
+      "question": "W jakich dniach i godzinach odbywa się dostawa?",
+      "answer":"Dostawy są realizowane od niedzieli do czwartku, w godzinach 21:00 - 5:00"
     },
     {
       "id":2,
-      "question":"asd",
-      "answer":"asd"
+      "question":"Czy możemy zamówić katering na różne rodzaje wydarzeń?",
+      "answer":"Tak, dostarczamy katering na różne rodzaje wydarzeń, w tym wesela, imprezy firmowe, uroczystości rodzinne, spotkania biznesowe, konferencje i wiele innych. Nasza oferta kateringu jest elastyczna i dostosowana do różnych okazji."
+    },
+    {
+      "id":3,
+      "question": "Jakie są koszty kateringu?",
+      "answer":"Koszty kateringu różnią się w zależności od wielu czynników, takich jak rodzaj wydarzenia, liczba gości, menu i inne szczegóły. Aby uzyskać dokładną wycenę, prosimy o kontakt z naszym zespołem, który przygotuje spersonalizowaną ofertę dostosowaną do Państwa potrzeb."
+    },
+    {
+      "id":4,
+      "question": " Czy dostarczacie usługi kateringu na terenie całego miasta?",
+      "answer":"Tak, dostarczamy usługi kateringu na terenie całego miasta oraz okolicznych regionów. Nasza firma ma szeroką sieć dostaw, co pozwala nam obsługiwać klientów w różnych lokalizacjach."
+    },
+    {
+      "id":5,
+      "question":"Jeżeli dieta mi nie zasmakuje, czy można oczekiwać zwrotu za niewykorzystane dni?",
+      "answer":"Nie. Mamy w ofercie pakiet próbny, który pozwoli Ci poznać nasze smaki. Możesz zamówić też kilka dni (np. 2, 3, 5..) na próbę, a dopiero później przedłużyć dietę."
+    },
+    {
+      "id":6,
+      "question": "Czy pojemnik mogę podgrzewać w mikrofali?",
+      "answer":"Tak, ale pamiętaj o zdjęciu folii ochronnej z góry opakowania. Nasz Szef Kuchni zamiast mikrofalówki, poleca podgrzewanie posiłków na patelni lub w piecyku."
     }
   ]
 }

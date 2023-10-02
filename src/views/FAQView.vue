@@ -20,14 +20,14 @@ getFAQData();
 </script>
 
 <template>
+  Tu bym logo dal na srodek jak juz bedzie
     <div class="errorHandler" v-if="eHandler">
         <ErrorHandler></ErrorHandler>
     </div>
     <div class="FAQView" v-else>
-      <h1>Frequently Asked Questions:</h1>
       <div class="FAQ">
         <FAQ
-        v-for="(item, index) in data"
+        v-for="(item) in data"
         :id="item.id"
         :question="item.question"
         :answer="item.answer"
