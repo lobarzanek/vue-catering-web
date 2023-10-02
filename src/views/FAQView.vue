@@ -16,31 +16,41 @@ const getFAQData = () => {
   });
 };
 getFAQData();
-
 </script>
 
 <template>
-  Tu bym logo dal na srodek jak juz bedzie
-    <div class="errorHandler" v-if="eHandler">
-        <ErrorHandler></ErrorHandler>
-    </div>
-    <div class="FAQView" v-else>
-      <div class="FAQ">
-        <FAQ
-        v-for="(item) in data"
+  <div class="errorHandler" v-if="eHandler">
+    <ErrorHandler></ErrorHandler>
+  </div>
+  <div class="FAQView" v-else>
+    <img src="../images/logo.svg" alt="" class="logo" />
+    <div class="FAQ">
+      <FAQ
+        v-for="item in data"
         :id="item.id"
         :question="item.question"
         :answer="item.answer"
-        ></FAQ>
-      </div>
+      ></FAQ>
+    </div>
   </div>
 </template>
 
 <style scoped lang="scss">
 .errorHandler {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: 20px 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 20px 60px;
+}
+
+.FAQView {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  .logo {
+    margin-top: 20px;
+    height: 100px;
   }
+}
 </style>
