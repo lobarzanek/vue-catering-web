@@ -1,0 +1,183 @@
+<script setup>
+import { ref } from "vue";
+import axios from "axios";
+import { useCounterStore } from "@/stores/counter";
+
+defineProps({
+  id: {
+    type: Number,
+    default: () => "",
+  },
+  title: {
+    type: String,
+    default: () => "",
+  },
+  price: {
+    type: Number,
+    default: () => "",
+  },
+  currency: {
+    type: String,
+    default: () => "",
+  },
+  imgSrc: {
+    type: String,
+    default: () => "",
+  },
+  imgAlt: {
+    type: String,
+    default: () => "",
+  },
+});
+const counter = useCounterStore();
+const data = ref([]);
+const eHandler = ref(true);
+
+const getCartData = () => {
+  axios.get("http://localhost:3000/diets").then((response) => {
+    if (response.statusText == "OK") {
+      eHandler.value = false;
+      data.value = response.data;
+    }
+  });
+};
+
+getCartData();
+</script>
+
+<template>
+  <div class="itemCard">
+    <div class="imgBox">
+      <img :src="imgSrc" :alt="imgAlt" />
+      <div class="numberPicker">
+        <button class="button decrement">-</button>
+        <input type="number" value="2" />
+        <button class="button increment">+</button>
+      </div>
+    </div>
+    <div class="content">
+      <div class="title">
+        <span>{{ title }}</span>
+        <div class="trash">X</div>
+      </div>
+      <textarea
+        placeholder="Tutaj możesz wpisać dodatkowe informacje.."
+      ></textarea>
+      <div class="price">
+        <span>Cena: {{ price }}</span>
+      </div>
+    </div>
+  </div>
+</template>
+
+<style scoped lang="scss">
+.itemCard {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 60vw;
+  border-radius: 10px;
+  box-shadow: 2px 4px 10px 1px #01111170;
+  overflow: hidden;
+
+  .imgBox {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    img {
+      width: 220px;
+      padding: 20px;
+    }
+
+    .numberPicker {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: row;
+      margin: 20px;
+      border-radius: 6px;
+      overflow: hidden;
+      box-shadow: 2px 4px 6px 1px #01111170;
+
+      input {
+        width: 60px;
+        height: 40px;
+        border: none;
+        font-size: 20px;
+        font-weight: bold;
+        padding: 10px;
+        text-align: center;
+
+        &::-webkit-outer-spin-button,
+        &::-webkit-inner-spin-button {
+          -webkit-appearance: none;
+          margin: 0;
+        }
+
+        &[type="number"] {
+          appearance: textfield;
+        }
+      }
+      .button {
+        width: 40px;
+        height: 40px;
+        border: none;
+        background-color: #26ad60;
+        color: #fff;
+        font-size: 26px;
+        font-weight: bold;
+
+        &:hover {
+          cursor: pointer;
+          background-color: #1d8048;
+        }
+      }
+    }
+  }
+
+  .content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    padding: 20px;
+    gap: 20px;
+
+    .title {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-direction: row;
+      width: 100%;
+      span {
+        font-size: 28px;
+        font-weight: bold;
+      }
+    }
+
+    textarea {
+      width: 100%;
+      height: 150px;
+      padding: 10px;
+      font-size: 18px;
+      border: none;
+      border-radius: 10px;
+      box-shadow: 2px 4px 6px 1px #01111170;
+    }
+
+    .price {
+      width: 100%;
+      display: flex;
+      justify-content: end;
+
+      span{
+        font-size: 24px;font-weight: bold;
+      }
+    }
+  }
+}
+</style>
