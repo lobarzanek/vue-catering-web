@@ -61,9 +61,8 @@ defineProps({
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  height: 450px;
-  width: 250px;
-  padding: 20px;
+  height: 500px;
+  width: 270px;
   border-radius: 8px;
   box-shadow: 2px 4px 10px 1px #01111170;
   overflow: hidden;
@@ -89,6 +88,7 @@ defineProps({
     align-items: center;
     text-align: center;
     margin-bottom: 10px;
+    padding: 10px;
   }
 
   .mealsCount {

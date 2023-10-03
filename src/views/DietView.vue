@@ -56,7 +56,7 @@ getDietsData();
     justify-content: center;
     align-items: center;
     margin: 30px 0;
-    gap: 100px;
+    gap: 70px;
   }
 }
 .errorHandler {
