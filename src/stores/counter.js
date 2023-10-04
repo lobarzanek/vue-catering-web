@@ -1,16 +1,19 @@
-import { ref, computed } from 'vue'
-import { defineStore } from 'pinia'
+import { ref, computed } from "vue";
+import { defineStore } from "pinia";
 
+export const useCounterStore = defineStore("counter", () => {
+  const count = ref(0);
+  const tab = ref([]);
+  const cartData = ref([]);
 
-export const useCounterStore = defineStore('counter', () => {
-  const count = ref(0)
-  const tab = ref([])
-  const doubleCount = computed(() => count.value * 2)
+  const cart = computed(() => tab._rawValue);
   function increment(id) {
     count.value++;
-    tab._rawValue.push(id)
-    console.log(tab._rawValue);
+    tab._rawValue.push(id);
   }
+  function decrement(id) {
+    count.value--;
+  }
+  return { count, increment, length, cart, cartData };
+});
 
-  return { count, doubleCount, increment }
-})
