@@ -2,7 +2,9 @@
 import { RouterLink } from "vue-router";
 import { useCounterStore } from "@/stores/counter";
 
-const addToCard = useCounterStore()
+const counter = useCounterStore();
+
+
 </script>
 <template>
   <header>
@@ -17,7 +19,7 @@ const addToCard = useCounterStore()
         <RouterLink to="/contact" class="nav-link">Kontakt</RouterLink>
       </nav>
     </div>
-    <div> Ilość zamówionych diet: {{addToCard.count}}</div>
+    <RouterLink to="/cart" class="nav-link">Ilość zamówionych diet: {{counter.count}}</RouterLink>
   </header>
 </template>
 <style scoped lang="scss">
