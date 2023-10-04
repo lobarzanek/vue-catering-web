@@ -7,7 +7,16 @@ import ItemCard from "../components/content/cartpage/itemCard.vue";
 import Summary from "../components/content/cartpage/summary.vue";
 
 const counter = useCounterStore();
-console.log(counter.tab);
+// counter.increment(1)
+// counter.increment(1)
+counter.increment(2);
+counter.increment(2);
+counter.increment(2);
+counter.increment(3);
+counter.increment(3);
+counter.increment(3);
+counter.increment(3);
+console.log(counter.cartData);
 
 const data = ref([]);
 const eHandler = ref(true);
@@ -16,16 +25,26 @@ const getCartData = () => {
   axios.get("http://localhost:3000/diets").then((response) => {
     if (response.statusText == "OK") {
       eHandler.value = false;
-      data.value = response.data;
+
+      data.value = response.data.filter((e) => counter.cart.includes(e.id));
+      data.value.map(
+        (e) => (e.Count = counter.cart.filter((x) => x == e.id).length)
+      );
     }
   });
 };
 
 getCartData();
+
+// filteredCartData.value = data.value.filter((e) => counter.cart.includes(e.id));
+// console.log(filteredCartData);
 </script>
 
 <template>
-  <div class="cart">
+  <div class="errorHandler" v-if="eHandler">
+    <ErrorHandler></ErrorHandler>
+  </div>
+  <div class="cart" v-else>
     <div class="items">
       <ItemCard
         v-for="(item, index) in data"
@@ -34,12 +53,15 @@ getCartData();
         :description="item.description"
         :price="item.price"
         :currency="item.currency"
+        :count="item.Count"
         :imgSrc="item.imgSrc"
         :imgAlt="item.imgAlt"
         :key="index"
       ></ItemCard>
     </div>
-    <div class="summary"><Summary></Summary></div>
+    <div class="summary" v-if="counter.count > 0">
+      <Summary :cartData="data"></Summary>
+    </div>
   </div>
 </template>
 

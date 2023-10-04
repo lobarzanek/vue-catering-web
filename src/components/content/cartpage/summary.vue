@@ -1,33 +1,32 @@
 <script setup>
 import { ref } from "vue";
+import { useCounterStore } from "@/stores/counter";
 
-defineProps({
-  data: {
+const props = defineProps({
+  cartData: {
     type: Array,
     default: () => [],
   },
 });
 
-const cartData = ref([]);
-
-cartData.value = [
-  { id: 1, Name: "Dieta 1500kcal", Count: 1, Price: 100, Currency: "PLN" },
-  { id: 2, Name: "Dieta 2000kcal", Count: 2, Price: 200, Currency: "PLN" },
-  { id: 3, Name: "Dieta 2500kcal", Count: 3, Price: 300, Currency: "PLN" },
-];
+const counter = useCounterStore();
+console.log(props.cartData);
 
 const summaryPrice = ref(0);
+const currency = ref("");
 
-const getSummaryPrice = (arr) => {
-  arr.forEach((e) => {
-    summaryPrice.value += e.Count * e.Price;
-  });
+const getSummaryPrice = () => {
+  summaryPrice.value += props.cartData.reduce(
+    (total, e) => total + e.price * e.Count,
+    0
+  );
 };
 
-const currency = ref("");
-currency.value = "PLN";
-
-getSummaryPrice(cartData.value);
+const getCurrency = () => {
+  currency.value = props.cartData[0].currency
+}
+getCurrency();
+getSummaryPrice();
 </script>
 
 <template>
@@ -42,16 +41,16 @@ getSummaryPrice(cartData.value);
         </tr>
       </thead>
       <tbody>
-        <tr v-for="(item, index) in cartData" :key="index">
-          <td>{{ item.Name }}</td>
+        <tr v-for="(item, index) in props.cartData" :key="index">
+          <td>{{ item.title }}</td>
           <td>{{ item.Count }}</td>
-          <td>{{ item.Count * item.Price }}{{ item.Currency }}</td>
+          <td>{{ item.Count * item.price }}{{ item.currency }}</td>
         </tr>
       </tbody>
       <tfoot>
         <tr>
-          <td></td>
           <th>Razem:</th>
+          <td>{{ counter.count }}</td>
           <td>{{ summaryPrice }}{{ currency }}</td>
         </tr>
       </tfoot>
@@ -86,6 +85,8 @@ getSummaryPrice(cartData.value);
     tr {
       th,
       td {
+        font-size: 20px;
+
         padding: 5px 10px;
         text-align: left;
       }

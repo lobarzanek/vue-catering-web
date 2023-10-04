@@ -1,6 +1,4 @@
 <script setup>
-import { ref } from "vue";
-import axios from "axios";
 import { useCounterStore } from "@/stores/counter";
 
 defineProps({
@@ -14,11 +12,15 @@ defineProps({
   },
   price: {
     type: Number,
-    default: () => "",
+    default: () => 0,
   },
   currency: {
     type: String,
     default: () => "",
+  },
+  count: {
+    type: Number,
+    default: () => 0,
   },
   imgSrc: {
     type: String,
@@ -29,20 +31,10 @@ defineProps({
     default: () => "",
   },
 });
-const counter = useCounterStore();
-const data = ref([]);
-const eHandler = ref(true);
 
-const getCartData = () => {
-  axios.get("http://localhost:3000/diets").then((response) => {
-    if (response.statusText == "OK") {
-      eHandler.value = false;
-      data.value = response.data;
-    }
-  });
-};
+const counter = useCounterStore()
 
-getCartData();
+
 </script>
 
 <template>
@@ -51,8 +43,8 @@ getCartData();
       <img :src="imgSrc" :alt="imgAlt" />
       <div class="numberPicker">
         <button class="button decrement">-</button>
-        <input type="number" value="2" />
-        <button class="button increment">+</button>
+        <input type="number" :value="count" min="0"/>
+        <button @click="counter.increment(id)" class="button increment">+</button>
       </div>
     </div>
     <div class="content">
@@ -64,7 +56,7 @@ getCartData();
         placeholder="Tutaj możesz wpisać dodatkowe informacje.."
       ></textarea>
       <div class="price">
-        <span>Cena: {{ price }}</span>
+        <span>Cena: {{ count * price }}{{ currency }}</span>
       </div>
     </div>
   </div>
