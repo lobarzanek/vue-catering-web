@@ -19,7 +19,7 @@ const counter = useCounterStore();
         <RouterLink to="/contact" class="nav-link">Kontakt</RouterLink>
       </nav>
     </div>
-    <RouterLink to="/cart" class="nav-link">Ilość zamówionych diet: {{counter.count}}</RouterLink>
+    <RouterLink to="/cart" class="nav-link">Ilość zamówionych diet: {{counter.storeCounter.count}}</RouterLink>
   </header>
 </template>
 <style scoped lang="scss">
