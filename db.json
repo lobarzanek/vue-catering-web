@@ -84,5 +84,53 @@
       "question": "Czy pojemnik mogę podgrzewać w mikrofali?",
       "answer":"Tak, ale pamiętaj o zdjęciu folii ochronnej z góry opakowania. Nasz Szef Kuchni zamiast mikrofalówki, poleca podgrzewanie posiłków na patelni lub w piecyku."
     }
+  ],
+
+  "contact": [
+    {
+      "id":1,
+      "phoneNumber":2,
+      "email":"asd@wp.pl"
+    }
+  ],
+
+  "contactus": [
+    {
+      "id":1, 
+      "titleUs":"Obsługa klienta",
+      "phoneNumberUs":123123123,
+      "emailUs":"szpatulagastro.@gmail.com"
+    },
+    {
+      "id":2,
+      "titleUs":"Właściciele",
+      "subTitleUs":"Łukasz, Przemek",
+      "phoneNumberUs":332332332,
+      "emailUs":"owner.szpatulagastro.@gmail.com"
+    },
+    {
+      "id":3, 
+      "titleUs":"Dział Marketinu",
+      "phoneNumberUs":221221221,
+      "emailUs":"marketing.szpatulagastro.@gmail.com"
+    },
+    {
+      "id":4, 
+      "titleUs":"Dział Zaopatrzenia",
+      "phoneNumberUs":441441441,
+      "emailUs":"zaopatrzenie.szpatulagastro.@gmail.com"
+    },
+    {
+      "id":5, 
+      "titleUs":"Dział Sprzedaży",
+      "phoneNumberUs":551551551,
+      "emailUs":"sprzedaz.szpatulagastro.@gmail.com"
+    },
+    {
+      "id":6, 
+      "titleUs":"Dział HR",
+      "phoneNumberUs":111111111,
+      "emailUs":"hr.szpatulagastro.@gmail.com"
+    }
   ]
 }

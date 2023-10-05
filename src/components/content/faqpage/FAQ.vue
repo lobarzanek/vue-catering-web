@@ -61,6 +61,7 @@ const toggleClass = () =>{
     justify-content: center;
     flex-direction: column;
     align-items: center;
+    padding: 5px;
 }
 
 .faq:first-child{
@@ -85,7 +86,7 @@ const toggleClass = () =>{
 }
 
 .answer p{
-    line-height: 1.2;
+    line-height: 1.7;
     font-size: 1.4rem;
 }
 

@@ -1,7 +1,7 @@
 <script setup>
 import { ref } from "vue";
 import axios from "axios";
-import FAQ from "../components/content/faqpage/FAQ.vue";
+import FAQ from "@/components/content/faqpage/FAQ.vue";
 import ErrorHandler from "@/components/content/errorHandler/ErrorHandler.vue";
 
 const data = ref([]);
