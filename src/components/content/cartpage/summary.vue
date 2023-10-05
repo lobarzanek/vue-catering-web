@@ -2,30 +2,15 @@
 import { ref } from "vue";
 import { useCounterStore } from "@/stores/counter";
 
-const props = defineProps({
-  cartData: {
-    type: Array,
-    default: () => [],
-  },
-});
-
 const counter = useCounterStore();
-console.log(props.cartData);
-
 const summaryPrice = ref(0);
-const currency = ref("");
 
 const getSummaryPrice = () => {
-  summaryPrice.value += props.cartData.reduce(
-    (total, e) => total + e.price * e.Count,
-    0
-  );
+  counter.cartData.forEach((e) => {
+    summaryPrice.value += counter.cartDict[e.id] * e.price;
+  });
 };
 
-const getCurrency = () => {
-  currency.value = props.cartData[0].currency
-}
-getCurrency();
 getSummaryPrice();
 </script>
 
@@ -41,17 +26,21 @@ getSummaryPrice();
         </tr>
       </thead>
       <tbody>
-        <tr v-for="(item, index) in props.cartData" :key="index">
-          <td>{{ item.title }}</td>
-          <td>{{ item.Count }}</td>
-          <td>{{ item.Count * item.price }}{{ item.currency }}</td>
+        <tr v-for="(item, index) in counter.cartData" :key="index">
+          <template v-if="counter.cartDict[item.id] > 0">
+            <td>{{ item.title }}</td>
+            <td>{{ counter.cartDict[item.id] }}</td>
+            <td>
+              {{ counter.cartDict[item.id] * item.price }}{{ item.currency }}
+            </td>
+          </template>
         </tr>
       </tbody>
       <tfoot>
         <tr>
           <th>Razem:</th>
-          <td>{{ counter.count }}</td>
-          <td>{{ summaryPrice }}{{ currency }}</td>
+          <td>{{ counter.storeCounter.count }}</td>
+          <td>{{ counter.storeCounter.price }}PLN</td>
         </tr>
       </tfoot>
     </table>

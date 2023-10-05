@@ -32,19 +32,21 @@ defineProps({
   },
 });
 
-const counter = useCounterStore()
-
-
+const counter = useCounterStore();
 </script>
 
 <template>
-  <div class="itemCard">
+  <div class="itemCard" v-if="counter.cartDict[id] > 0">
     <div class="imgBox">
       <img :src="imgSrc" :alt="imgAlt" />
       <div class="numberPicker">
-        <button class="button decrement">-</button>
-        <input type="number" :value="count" min="0"/>
-        <button @click="counter.increment(id)" class="button increment">+</button>
+        <button @click="counter.deleteFromCart(this)" class="button decrement">
+          -
+        </button>
+        <input type="number" :value="counter.cartDict[id]" min="0" />
+        <button @click="counter.addToCart(this)" class="button increment">
+          +
+        </button>
       </div>
     </div>
     <div class="content">
@@ -56,7 +58,7 @@ const counter = useCounterStore()
         placeholder="Tutaj możesz wpisać dodatkowe informacje.."
       ></textarea>
       <div class="price">
-        <span>Cena: {{ count * price }}{{ currency }}</span>
+        <span>Cena: {{ counter.cartDict[id] * price }}{{ currency }}</span>
       </div>
     </div>
   </div>
@@ -166,8 +168,9 @@ const counter = useCounterStore()
       display: flex;
       justify-content: end;
 
-      span{
-        font-size: 24px;font-weight: bold;
+      span {
+        font-size: 24px;
+        font-weight: bold;
       }
     }
   }
