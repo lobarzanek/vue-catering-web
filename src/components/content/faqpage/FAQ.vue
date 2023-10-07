@@ -62,20 +62,29 @@ const toggleClass = () =>{
     flex-direction: column;
     align-items: center;
     padding: 5px;
+    &:first-child{
+      margin-top: 2%;
+      border-top: 2px solid black;
+    }
+    &.active{
+      svg{
+        transform: rotate(180deg);
+    }
+    .answer{
+      max-height: 300px;
+      animation: fade 0.5s ease-in-out;
+    }
+    }
 }
 
-.faq:first-child{
-  margin-top: 2%;
-  border-top: 2px solid black;
-}
+
 .question{
     display: flex;
     align-items: center;
     padding: 5px;
-}
-
-.question h3{
-    font-size: 1.4rem;
+    h3{
+      font-size: 1.4rem;
+    }
 }
 
 .answer{
@@ -83,20 +92,10 @@ const toggleClass = () =>{
     overflow: hidden;
     transition: max-height 1s ease;
     padding: 5px;
-}
-
-.answer p{
-    line-height: 1.7;
-    font-size: 1.4rem;
-}
-
-.faq.active .answer{
-    max-height: 300px;
-    animation: fade 0.5s ease-in-out;
-}
-
-.faq.active svg{
-    transform: rotate(180deg);
+    p{
+      line-height: 1.7;
+      font-size: 1.4rem;
+    }
 }
 
 svg{
