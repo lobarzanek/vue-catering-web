@@ -132,5 +132,11 @@
       "phoneNumberUs":111111111,
       "emailUs":"hr.szpatulagastro.@gmail.com"
     }
+  ],
+
+  "home": [
+    {
+      "id":1
+    }
   ]
 }

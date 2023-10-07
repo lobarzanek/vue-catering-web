@@ -1,40 +1,41 @@
-<!-- <script setup>
-import {ref} from "vue";
-import Wrapper from "@/components/content/wrapper/Wrapper.vue";
-import Image from "@/components/content/homepage/Image.vue";
+<script setup>
+import { ref } from "vue";
+import axios from "axios";
+import Home from "@/components/content/homepage/Home.vue";
+import ErrorHandler from "@/components/content/errorHandler/ErrorHandler.vue";
 
-//const data = ref([])
- 
-Example of use "data" 
-data.value = [
-  {
-    id: 1,
-    title: "Meduza",
-    price: "250zł/doba",
-    img: 'https://triverna.pl/uploads/album_1440/bc2cc816ef1d5bc14a07bbbb9103df3e07617b91.jpg',
-  },
-  {
-    id: 2,
-    title: "Hilton",
-    price: "25000/doba",
-    img: 'https://triverna.pl/uploads/album_1440/bc2cc816ef1d5bc14a07bbbb9103df3e07617b91.jpg',
-  }
-]
+const data = ref([]);
+const eHandler = ref(true);
 
-
-
-</script> 
-
- <template>
-  <wrapper>
-    <Image v-for="(item, index) in data" :img-link="item.img" :title="item.title" :price="item.price" :key="index"/>
-  </wrapper>
-</template> -->
-
+const getHomeData = () => {
+  axios.get("http://localhost:3000/home").then((response) => {
+    if (response.statusText == "OK") {
+      eHandler.value = false;
+      data.value = response.data;
+    }
+  });
+};
+getHomeData();
+</script>
 <template>
-
+  <div class="errorHandler" v-if="eHandler">
+    <ErrorHandler></ErrorHandler>
+  </div>
+  <div class="FAQView" v-else>
+    <img src="../images/logo.svg" alt="" class="logo" />
+    </div>
 </template>
 
 <style scoped lang="scss">
-
+.errorHandler {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 20px 60px;
+}
+.logo {
+  width: 100%;
+  height: 100px;
+  margin:auto;
+}
 </style>
