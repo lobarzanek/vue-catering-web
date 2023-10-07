@@ -100,35 +100,25 @@ function ValidateName() {
   width: 50%;
 }
 
-textarea,
-input,
-.send,
-.section {
+textarea,input,.send,.section {
   margin-top: 10px;
   margin-bottom: 10px;
-}
-textarea {
   box-shadow: 1px 1px 10px 1px black;
 }
+
 span {
   letter-spacing: normal;
   text-transform: uppercase;
   font-size: 13px;
   line-break: normal;
+  &::after, &::before{
+    content: "\a";
+    white-space: pre;
+  }
 }
 
-span::after {
-  content: "\a";
-  white-space: pre;
-}
 
-span::before {
-  content: "\a";
-  white-space: pre;
-}
-
-input,
-.section {
+input, .section {
   width: 80%;
   height: 50px;
   border: 1px groove black;
@@ -153,11 +143,10 @@ textarea {
   border-radius: 20px;
   background-color: #26ad60;
   transition: 500ms;
-}
-
-.send:hover{
-  color: white;
-  background-color: #435334;
-  transition: 500ms;
+  &:hover{
+    color: white;
+    background-color: #435334;
+    transition: 500ms;
+  }
 }
 </style>
