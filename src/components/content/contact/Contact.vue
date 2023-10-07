@@ -1,7 +1,7 @@
 <script setup>
 import { ref } from "vue";
 
-const inputName = ref(0);
+const inputName = ref();
 const inputEmail = ref("");
 const inputPhone = ref("");
 
