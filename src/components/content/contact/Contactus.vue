@@ -41,6 +41,6 @@ defineProps({
     display: flexbox;
     border-radius: 15px;
     margin-bottom: 30px;
-    box-shadow: 1px 1px 1px 1px black;
+    box-shadow: 1px 1px 1px 1px #26ad60;
 }
 </style>

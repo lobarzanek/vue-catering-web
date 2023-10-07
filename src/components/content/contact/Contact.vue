@@ -136,6 +136,7 @@ input,
   padding: 5px;
   box-shadow: 1px 1px 10px 1px black;
 }
+
 textarea {
   width: 80%;
   height: 150px;
@@ -143,7 +144,20 @@ textarea {
   padding: 5px;
 }
 .send {
+  width: 150px;
+  height: 20px;
+  justify-content: center;
   margin: auto;
   display: flex;
+  border: 1px groove black;
+  border-radius: 20px;
+  background-color: #26ad60;
+  transition: 500ms;
+}
+
+.send:hover{
+  color: white;
+  background-color: #435334;
+  transition: 500ms;
 }
 </style>
