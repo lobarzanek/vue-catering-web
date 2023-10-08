@@ -1,5 +1,5 @@
 <script setup>
-import Contact from '/components/content/contact/contact.vue';
+import Contact from '@/components/content/contact/contact.vue';
 import {ref} from "vue";
 import ErrorHandler from "@/components/content/errorHandler/ErrorHandler.vue";
 import axios from "axios";
