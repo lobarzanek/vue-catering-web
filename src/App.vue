@@ -5,9 +5,11 @@ import Navbar from "@/components/menu/Navbar.vue";
 
 <template>
   <Navbar></Navbar>
-  <RouterView v-slot="{ Component }">
+  <RouterView v-slot="{ Component, route }">
     <Transition name="route" mode="out-in">
-      <component :is="Component"></component>
+      <div :key="route.name">
+        <component :is="Component"></component>
+      </div>
     </Transition>
   </RouterView>
 </template>
