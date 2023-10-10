@@ -136,7 +136,39 @@
 
   "home": [
     {
-      "id":1
+      "id":1,
+      "title":"Zupa ogórkowa",
+      "img":"src/images/CucumberSoup255x270.png",
+      "opinion":4,
+      "comment":"Jedna z lepszych zup!"
+    },
+    {
+      "id":2,
+      "title":"Kotlet panko",
+      "img":"src/images/Panko255x270.png",
+      "opinion":5,
+      "comment":"Najlepsze danie."
+    },
+    {
+      "id":3,
+      "title":"Makaron z sosem",
+      "img":"src/images/CurryNudle255x270.png",
+      "opinion":3,
+      "comment":"Sos nie do końca pasuje do całej reszty."
+    },
+    {
+      "id":4,
+      "title":"Pierogi ruskie",
+      "img":"src/images/Dumplings255x270.png",
+      "opinion":4,
+      "comment":"Cudowne!"
+    },
+    {
+      "id":5,
+      "title":"Sushi",
+      "img":"src/images/Sushi255x270.png",
+      "opinion":4,
+      "comment":"Jest okej."
     }
   ]
 }

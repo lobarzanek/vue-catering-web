@@ -18,12 +18,21 @@ const getHomeData = () => {
 getHomeData();
 </script>
 <template>
-  <div class="errorHandler" v-if="eHandler">
+   <div class="errorHandler" v-if="eHandler">
     <ErrorHandler></ErrorHandler>
-  </div>
-  <div class="FAQView" v-else>
+  </div> 
+  <div class="HomeView" v-else>
     <img src="../images/logo.svg" alt="" class="logo" />
-    <Home/>
+    <Home
+    v-for="(item, index) in data"
+    :id="item.id"
+    :title="item.title"
+    :img="item.img"
+    :opinion="item.opinion"
+    :comment="item.comment"
+    :key="index"
+    ></Home>
+    <RouterLink to="/diet" class="button">Zamów nasze diety!</RouterLink>
     </div>
 </template>
 
@@ -38,5 +47,31 @@ getHomeData();
   width: 100%;
   height: 100px;
   margin:auto;
+  margin-top: 1rem;
+}
+.button {
+  width: 700px;
+  height: 100px;
+  justify-content: center;
+  margin: auto;
+  display: flex;
+  border: 1px groove black;
+  border-radius: 20px;
+  background-color: #26ad60;
+  transition: 500ms;
+  margin-top: 500px;
+  font-size: 63px;
+  &:hover{
+    background-color: #435334;
+    transition: 500ms;
+  }
+  &:visited{
+    color:black;
+    text-decoration: none;
+  }
+  &:link{
+    color: black;
+    text-decoration: none;
+  }
 }
 </style>
