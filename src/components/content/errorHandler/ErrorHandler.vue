@@ -14,7 +14,7 @@
       >Wygląda na to, że nasz serwer nie odpowiada. Bardzo przepraszamy za
       zaistniałą sytuację! Nasz zespół już pracuje nad naprawieniem błędu. Jeśli
       masz jakieś pytania odnośnie naszej oferty zachęcamy do kontaktu
-      e-mailowego lub telefonicznego.</span
+      e-mailowego lub telefonicznego!</span
     >
     <span>E-mail: kontakt@domena.com</span>
     <span>tel.: +12 345 678 900</span>
