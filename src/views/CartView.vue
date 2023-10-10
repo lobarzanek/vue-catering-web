@@ -2,13 +2,14 @@
 import { useCounterStore } from "@/stores/counter";
 import ItemCard from "../components/content/cartpage/itemCard.vue";
 import Summary from "../components/content/cartpage/summary.vue";
+import Empty from "../components/content/cartpage/empty.vue";
 
 const counter = useCounterStore();
 </script>
 
 <template>
   <div class="cart">
-    <div class="items">
+    <div class="items" v-if="counter.storeCounter.count > 0">
       <ItemCard
         v-for="(item, index) in counter.cartData"
         :id="item.id"
@@ -22,6 +23,7 @@ const counter = useCounterStore();
         :key="index"
       ></ItemCard>
     </div>
+    <Empty v-else></Empty>
     <div class="summary">
       <Summary></Summary>
     </div>
