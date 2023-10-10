@@ -8,7 +8,7 @@ const counter = useCounterStore();
 </script>
 <template>
   <header>
-    <img class="logo" src="../../images/logo50x50.png" alt="" />
+    <img class="logo" src="@/images/logo.svg" alt="" />
     <div class="wrapper top-bar">
       <nav>  
         <RouterLink to="/" class="nav-link">Home</RouterLink>
@@ -56,10 +56,7 @@ header {
 }
 .logo{
   float:left;
-  width: 50px;
-  height: 50px;
-  border-radius: 50%;
-  position:absolute;
+  width: 200px;
   margin-left: 25px;
 }
 </style>
