@@ -8,7 +8,6 @@ const data = ref([]);
 const eHandler = ref(true);
 
 const getDietsData = async () => {
-  await new Promise((resolve) => setTimeout(resolve, 3000));
   axios.get("http://localhost:3000/diets").then((response) => {
     if (response.statusText == "OK") {
       eHandler.value = false;
@@ -20,12 +19,10 @@ getDietsData();
 </script>
 
 <template>
-  <!-- <div class="errorHandler" v-if="eHandler">
+  <div class="errorHandler" v-if="eHandler">
     <ErrorHandler></ErrorHandler>
-  </div> -->
-  <Suspense>
-    <template #default>
-      <div class="dietView">
+  </div>
+      <div class="dietView" v-else>
         <h1>Nasze diety:</h1>
         <div class="dietCards">
           <DietCard
@@ -42,9 +39,6 @@ getDietsData();
           ></DietCard>
         </div>
       </div>
-    </template>
-    <template #fallback> Loading... </template>
-  </Suspense>
 </template>
 
 <style scoped lang="scss">
