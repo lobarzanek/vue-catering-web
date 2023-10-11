@@ -16,18 +16,8 @@ defineProps({
   },
 });
 
-// const faqs = document.querySelectorAll(".faq");
-
-// faqs.forEach((faq) => {
-//     faq.addEventListener("click", () => {
-//         faq.classList.toggle("active");
-//     });
-// });
-
-
 const toggle = ref(false)
 const toggleClass = () =>{
-  console.log("click");
   toggle.value = !toggle.value
 }
 </script>
