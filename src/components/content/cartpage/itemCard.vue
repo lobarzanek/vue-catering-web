@@ -33,6 +33,13 @@ defineProps({
 });
 
 const counter = useCounterStore();
+const trashSrc = "src/images/trash-alt-svgrepo-com.svg";
+
+const trashFunction = (e, count) => {
+  for (let i = 0; i <= count; i++) {
+    counter.deleteFromCart(e);
+  }
+};
 </script>
 
 <template>
@@ -52,7 +59,12 @@ const counter = useCounterStore();
     <div class="content">
       <div class="title">
         <span>{{ title }}</span>
-        <div class="trash">X</div>
+        <button
+          @click="trashFunction(this, counter.cartDict[id])"
+          class="trash"
+        >
+          <img :src="trashSrc" alt="X" />
+        </button>
       </div>
       <textarea
         placeholder="Tutaj możesz wpisać dodatkowe informacje.."
@@ -150,6 +162,21 @@ const counter = useCounterStore();
       span {
         font-size: 28px;
         font-weight: bold;
+      }
+
+      .trash {
+        border: none;
+        background-color: transparent;
+        transition: rotate 0.1s ease-in-out;
+        img {
+          width: 35px;
+          aspect-ratio: 1;
+        }
+        &:hover {
+          rotate: -15deg;
+          cursor: pointer;
+          color: #c00000;
+        }
       }
     }
 
