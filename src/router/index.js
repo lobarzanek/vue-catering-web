@@ -40,6 +40,7 @@ const router = createRouter({
       component: () => import("@/views/CartView.vue"),
     },
   ],
+  linkActiveClass: "active-route",
 });
 
 export default router;

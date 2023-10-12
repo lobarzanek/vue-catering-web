@@ -1,9 +1,6 @@
 <script setup>
 import { RouterLink } from "vue-router";
-import { useCounterStore } from "@/stores/counter";
 import NavbarItem from "@/components/menu/NavbarItem.vue";
-
-const counter = useCounterStore();
 
 const cartIcon = "src/images/cart-svgrepo-com.svg"
 const userIcon = "src/images/user-svgrepo-com.svg"
@@ -51,15 +48,15 @@ header {
     .nav-link {
       color: gray;
       text-decoration: none;
-      padding: 10px;
+      padding: 5px 10px;
       margin: 0 10px;
 
-      &:hover {
+      &:hover, &.active-route {
         background-color: #26ad60;
         color: white;
-        padding: 5px 10px;
         border-radius: 5px;
         transition-duration: 1ms;
+        cursor: pointer;
       }
     }
   }
