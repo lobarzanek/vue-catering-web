@@ -1,7 +1,7 @@
+<script setup>
+import CateringComponent from "@/components/content/cateringpage/cateringComponent.vue"
+</script>
+
 <template>
-<h1>Catering</h1>
+    <CateringComponent></CateringComponent>
 </template>
-
-<style>
-
-</style>

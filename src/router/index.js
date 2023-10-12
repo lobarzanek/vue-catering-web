@@ -1,10 +1,4 @@
 import { createRouter, createWebHistory } from "vue-router";
-import HomeView from "../views/HomeView.vue";
-import DietView from "../views/DietView.vue";
-import CateringView from "../views/CateringView.vue";
-import AboutView from "../views/AboutView.vue";
-import faqView from "../views/faqView.vue";
-import ContactView from "../views/ContactView.vue";
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -12,35 +6,41 @@ const router = createRouter({
     {
       path: "/",
       name: "home",
-      component: HomeView,
+      component: () => import("@/views/HomeView.vue"),
     },
 
     {
       path: "/diet",
       name: "diet",
-      component: DietView,
+      component: () => import("@/views/DietView.vue"),
     },
     {
       path: "/catering",
       name: "catering",
-      component: CateringView,
+      component: () => import("@/views/CateringView.vue"),
     },
     {
       path: "/about-us",
       name: "about-us",
-      component: AboutView,
+      component: () => import("@/views/AboutView.vue"),
     },
     {
       path: "/faq",
       name: "faq",
-      component: faqView,
+      component: () => import("@/views/faqView.vue"),
     },
     {
       path: "/contact",
       name: "contact",
-      component: ContactView,
+      component: () => import("@/views/ContactView.vue"),
+    },
+    {
+      path: "/cart",
+      name: "cart",
+      component: () => import("@/views/CartView.vue"),
     },
   ],
+  linkActiveClass: "active-route",
 });
 
 export default router;

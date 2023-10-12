@@ -30,5 +30,145 @@
       "imgSrc": "src/images/bear200x200.png",
       "imgAlt": "Silny niedźwiedź"
     }
+  ],
+
+  "aboutus": [
+    {
+      "id": 1,
+      "name": "Przemek",
+      "description": "Miłośnik szybkich samochodów i pięknych jachtów",
+      "imgSrc": "https://cdn.pixabay.com/photo/2016/11/21/14/53/man-1845814_1280.jpg",
+      "imgAlt": "Zdjęcie profilowe",
+      "bgcImgSrc": "https://cdn.pixabay.com/photo/2023/09/15/04/05/sea-8254024_1280.jpg",
+      "bgcImgAlt": "Zatoka z jachtami"
+    },
+    {
+      "id": 2,
+      "name": "Łukasz",
+      "description": "Uwielbia spędzać czas na świeżym powietrzu pijąc Kuflowe mocne",
+      "imgSrc": "https://cdn.pixabay.com/photo/2016/11/23/00/33/man-1851469_1280.jpg",
+      "imgAlt": "Zdjęcie profilowe",
+      "bgcImgSrc": "https://cdn.pixabay.com/photo/2023/08/30/09/24/leaves-8222919_1280.jpg",
+      "bgcImgAlt": "Zielone liście"
+    }
+  ],
+
+  "faq": [
+    {
+      "id":1,
+      "question": "W jakich dniach i godzinach odbywa się dostawa?",
+      "answer":"Dostawy są realizowane od niedzieli do czwartku, w godzinach 21:00 - 5:00"
+    },
+    {
+      "id":2,
+      "question":"Czy możemy zamówić katering na różne rodzaje wydarzeń?",
+      "answer":"Tak, dostarczamy katering na różne rodzaje wydarzeń, w tym wesela, imprezy firmowe, uroczystości rodzinne, spotkania biznesowe, konferencje i wiele innych. Nasza oferta kateringu jest elastyczna i dostosowana do różnych okazji."
+    },
+    {
+      "id":3,
+      "question": "Jakie są koszty kateringu?",
+      "answer":"Koszty kateringu różnią się w zależności od wielu czynników, takich jak rodzaj wydarzenia, liczba gości, menu i inne szczegóły. Aby uzyskać dokładną wycenę, prosimy o kontakt z naszym zespołem, który przygotuje spersonalizowaną ofertę dostosowaną do Państwa potrzeb."
+    },
+    {
+      "id":4,
+      "question": " Czy dostarczacie usługi kateringu na terenie całego miasta?",
+      "answer":"Tak, dostarczamy usługi kateringu na terenie całego miasta oraz okolicznych regionów. Nasza firma ma szeroką sieć dostaw, co pozwala nam obsługiwać klientów w różnych lokalizacjach."
+    },
+    {
+      "id":5,
+      "question":"Jeżeli dieta mi nie zasmakuje, czy można oczekiwać zwrotu za niewykorzystane dni?",
+      "answer":"Nie. Mamy w ofercie pakiet próbny, który pozwoli Ci poznać nasze smaki. Możesz zamówić też kilka dni (np. 2, 3, 5..) na próbę, a dopiero później przedłużyć dietę."
+    },
+    {
+      "id":6,
+      "question": "Czy pojemnik mogę podgrzewać w mikrofali?",
+      "answer":"Tak, ale pamiętaj o zdjęciu folii ochronnej z góry opakowania. Nasz Szef Kuchni zamiast mikrofalówki, poleca podgrzewanie posiłków na patelni lub w piecyku."
+    }
+  ],
+
+  "contact": [
+    {
+      "id":1,
+      "phoneNumber":2,
+      "email":"asd@wp.pl"
+    }
+  ],
+
+  "contactus": [
+    {
+      "id":1, 
+      "titleUs":"Obsługa klienta",
+      "phoneNumberUs":123123123,
+      "emailUs":"szpatulagastro.@gmail.com"
+    },
+    {
+      "id":2,
+      "titleUs":"Właściciele",
+      "subTitleUs":"Łukasz, Przemek",
+      "phoneNumberUs":332332332,
+      "emailUs":"owner.szpatulagastro.@gmail.com"
+    },
+    {
+      "id":3, 
+      "titleUs":"Dział Marketinu",
+      "phoneNumberUs":221221221,
+      "emailUs":"marketing.szpatulagastro.@gmail.com"
+    },
+    {
+      "id":4, 
+      "titleUs":"Dział Zaopatrzenia",
+      "phoneNumberUs":441441441,
+      "emailUs":"zaopatrzenie.szpatulagastro.@gmail.com"
+    },
+    {
+      "id":5, 
+      "titleUs":"Dział Sprzedaży",
+      "phoneNumberUs":551551551,
+      "emailUs":"sprzedaz.szpatulagastro.@gmail.com"
+    },
+    {
+      "id":6, 
+      "titleUs":"Dział HR",
+      "phoneNumberUs":111111111,
+      "emailUs":"hr.szpatulagastro.@gmail.com"
+    }
+  ],
+
+  "home": [
+    {
+      "id":1,
+      "title":"Zupa ogórkowa",
+      "img":"src/images/CucumberSoup255x270.png",
+      "opinion":4,
+      "comment":"Jedna z lepszych zup!"
+    },
+    {
+      "id":2,
+      "title":"Kotlet panko",
+      "img":"src/images/Panko255x270.png",
+      "opinion":5,
+      "comment":"Najlepsze danie."
+    },
+    {
+      "id":3,
+      "title":"Makaron z sosem",
+      "img":"src/images/CurryNudle255x270.png",
+      "opinion":3,
+      "comment":"Sos nie do końca pasuje do całej reszty."
+    },
+    {
+      "id":4,
+      "title":"Pierogi ruskie",
+      "img":"src/images/Dumplings255x270.png",
+      "opinion":4,
+      "comment":"Cudowne!"
+    },
+    {
+      "id":5,
+      "title":"Sushi",
+      "img":"src/images/Sushi255x270.png",
+      "opinion":4,
+      "comment":"Jest okej."
+    }
   ]
 }
