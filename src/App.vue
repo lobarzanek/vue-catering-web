@@ -1,32 +1,39 @@
 <script setup>
 import { RouterView } from "vue-router";
 import Navbar from "@/components/menu/Navbar.vue";
+import Loading from "./components/content/loading/Loading.vue";
 </script>
 
 <template>
   <Navbar></Navbar>
-  <RouterView v-slot="{ Component, route }">
+  <RouterView name="default" v-slot="{ Component, route }">
     <Transition name="route" mode="out-in">
-      <div :key="route.name">
-        <component :is="Component"></component>
-      </div>
+      <Suspense timeout="0">
+        <div :key="route.name">
+          <component :is="Component"></component>
+        </div>
+        <template #fallback>
+          <Loading/>
+        </template>
+      </Suspense>
     </Transition>
   </RouterView>
 </template>
 
 <style scoped>
-.route-enter-from{
+
+.route-enter-from {
   opacity: 0;
   transform: translateX(100px);
 }
-.route-enter-active{
-  transition: all .3s ease-out;
+.route-enter-active {
+  transition: all 0.3s ease-out;
 }
-.route-leave-to{
+.route-leave-to {
   opacity: 0;
   transform: translateX(-100px);
 }
-.route-leave-active{
-  transition: all .3s ease-in;
+.route-leave-active {
+  transition: all 0.3s ease-in;
 }
 </style>
