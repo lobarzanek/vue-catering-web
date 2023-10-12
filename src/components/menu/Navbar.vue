@@ -2,8 +2,8 @@
 import { RouterLink } from "vue-router";
 import NavbarItem from "@/components/menu/NavbarItem.vue";
 
-const cartIcon = "src/images/cart-svgrepo-com.svg"
-const userIcon = "src/images/user-svgrepo-com.svg"
+const cartIcon = "src/images/cart-svgrepo-com.svg";
+const userIcon = "src/images/user-svgrepo-com.svg";
 </script>
 <template>
   <header>
@@ -18,9 +18,9 @@ const userIcon = "src/images/user-svgrepo-com.svg"
     </div>
     <div class="items">
       <RouterLink to="/cart" class="nav-link"
-        ><NavbarItem :iconSrc=cartIcon :counter=true ></NavbarItem
+        ><NavbarItem :iconSrc="cartIcon" :counter="true"></NavbarItem
       ></RouterLink>
-      <NavbarItem :iconSrc=userIcon></NavbarItem>
+      <NavbarItem :iconSrc="userIcon"></NavbarItem>
     </div>
   </header>
 </template>
@@ -49,13 +49,14 @@ header {
       color: gray;
       text-decoration: none;
       padding: 5px 10px;
+      border-radius: 5px;
       margin: 0 10px;
+      transition: background-color 0.1s ease-in-out, color 0.1s ease-in-out;
 
-      &:hover, &.active-route {
+      &:hover,
+      &.active-route {
         background-color: #26ad60;
         color: white;
-        border-radius: 5px;
-        transition-duration: 1ms;
         cursor: pointer;
       }
     }
