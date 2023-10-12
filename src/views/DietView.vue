@@ -8,14 +8,18 @@ const data = ref([]);
 const eHandler = ref(true);
 
 const getDietsData = async () => {
-  axios.get("http://localhost:3000/diets").then((response) => {
-    if (response.statusText == "OK") {
-      eHandler.value = false;
-      data.value = response.data;
-    }
-  });
+  try{
+    await axios.get("http://localhost:3000/diets").then((response) => {
+      if (response.statusText == "OK") {
+        eHandler.value = false;
+        data.value = response.data;
+      }
+    });
+  }catch{
+        return
+  }
 };
-getDietsData();
+await getDietsData();
 </script>
 
 <template>
