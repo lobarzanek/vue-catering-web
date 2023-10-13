@@ -1,8 +1,8 @@
 <script setup>
 import { useCounterStore } from "@/stores/counter";
-import ItemCard from "../components/content/cartpage/itemCard.vue";
-import Summary from "../components/content/cartpage/summary.vue";
-import Empty from "../components/content/cartpage/empty.vue";
+import ItemCard from "@/components/content/cartpage/itemCard.vue";
+import Summary from "@/components/content/cartpage/summary.vue";
+import Empty from "@/components/content/cartpage/empty.vue";
 
 const counter = useCounterStore();
 </script>

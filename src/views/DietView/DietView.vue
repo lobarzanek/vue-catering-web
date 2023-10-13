@@ -1,7 +1,7 @@
 <script async setup>
 import { ref } from "vue";
 import axios from "axios";
-import DietCard from "../components/content/dietpage/DietCard.vue";
+import DietCard from "@/components/content/dietpage/DietCard.vue";
 import ErrorHandler from "@/components/content/errorHandler/ErrorHandler.vue";
 
 const data = ref([]);

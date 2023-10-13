@@ -22,7 +22,7 @@ getHomeData();
     <ErrorHandler></ErrorHandler>
   </div> 
   <div class="HomeView" v-else>
-    <img src="../images/logo.svg" alt="" class="logo" />
+    <img src="@/images/logo.svg" alt="" class="logo" />
     <Home
     v-for="(item, index) in data"
     :id="item.id"

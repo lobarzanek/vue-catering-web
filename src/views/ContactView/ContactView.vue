@@ -3,7 +3,7 @@ import Contact from '@/components/content/contact/contact.vue';
 import {ref} from "vue";
 import ErrorHandler from "@/components/content/errorHandler/ErrorHandler.vue";
 import axios from "axios";
-import Contactus from '../components/content/contact/Contactus.vue';
+import Contactus from '@/components/content/contact/Contactus.vue';
 
 const data = ref([]);
 const eHandler = ref(true);

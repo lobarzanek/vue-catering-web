@@ -23,7 +23,7 @@ getFAQData();
     <ErrorHandler></ErrorHandler>
   </div>
   <div class="FAQView" v-else>
-    <img src="../images/logo.svg" alt="" class="logo" />
+    <img src="@/images/logo.svg" alt="" class="logo" />
     <div class="FAQ">
       <FAQ
         v-for="item in data"
