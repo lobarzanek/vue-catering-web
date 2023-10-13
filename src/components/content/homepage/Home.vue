@@ -44,8 +44,8 @@ align-items: center;
 text-align: center;
 padding: 10px;
 width: 280px;
-float: left;
-margin-left: 85px;
+overflow: hidden;
+align: left;
 }
 .card{
 opacity: 50%;

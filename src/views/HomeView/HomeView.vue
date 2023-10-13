@@ -23,15 +23,17 @@ getHomeData();
   </div> 
   <div class="HomeView" v-else>
     <img src="@/images/logo.svg" alt="" class="logo" />
-    <Home
-    v-for="(item, index) in data"
-    :id="item.id"
-    :title="item.title"
-    :img="item.img"
-    :opinion="item.opinion"
-    :comment="item.comment"
-    :key="index"
-    ></Home>
+    <div class="dinnerView">
+      <Home
+      v-for="(item, index) in data"
+      :id="item.id"
+      :title="item.title"
+      :img="item.img"
+      :opinion="item.opinion"
+      :comment="item.comment"
+      :key="index"
+      ></Home>
+    </div>
     <RouterLink to="/diet" class="button">Zamów nasze diety!</RouterLink>
     </div>
 </template>
@@ -59,7 +61,8 @@ getHomeData();
   border-radius: 20px;
   background-color: #26ad60;
   transition: 500ms;
-  margin-top: 500px;
+  margin-top: 50px;
+  margin-bottom: 50px;
   font-size: 63px;
   &:hover{
     background-color: #435334;
@@ -73,5 +76,26 @@ getHomeData();
     color: black;
     text-decoration: none;
   }
+}
+
+.HomeView {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-top: 20px;
+  h1{
+    font-size: 26px;
+    margin-bottom: 20px;
+  }
+}
+.dinnerView {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+  margin-bottom: 32px;
 }
 </style>
