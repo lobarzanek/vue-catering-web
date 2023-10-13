@@ -8,14 +8,19 @@ const data = ref([]);
 const eHandler = ref(true);
 
 async function getAboutUsData() {
-  axios.get("http://localhost:3000/aboutus").then((response) => {
-    if (response.statusText == "OK") {
-      eHandler.value = false;
-      data.value = response.data;
-    }
-  });
+  try{
+
+    await axios.get("http://localhost:3000/aboutus").then((response) => {
+      if (response.statusText == "OK") {
+        eHandler.value = false;
+        data.value = response.data;
+      }
+    });
+  }catch{
+    return
+  }
 }
-getAboutUsData();
+await getAboutUsData();
 </script>
 
 <template>
