@@ -1,5 +1,5 @@
 <script setup>
-
+import { RouterLink } from "vue-router";
 </script>
 <template>
 
@@ -18,7 +18,7 @@
                 Zaloguj
             </div>
             <div class="register">
-                Nie masz konta? Zarejstruj się!
+               <RouterLink to="/register" class="link">Nie masz konta? Zarejstruj się!</RouterLink>
             </div>
         </div>
      </div>
@@ -125,5 +125,9 @@ label{
     justify-content: center;
     width: 350px;
     align-items: center;
+  }
+  .link{
+    color: white;
+    text-decoration: none;
   }
 </style>
