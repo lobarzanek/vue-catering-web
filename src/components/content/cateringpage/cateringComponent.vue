@@ -51,15 +51,19 @@ import { RouterLink } from "vue-router";
   justify-content: center;
   flex-direction: column;
   padding: 40px;
-  gap: 40px;
+  gap: 20px;
   .title {
     display: flex;
     align-items: center;
     justify-content: center;
+    flex-direction: column;
     flex-wrap: wrap;
-    gap: 40px;
-    font-size: 30px;
+    gap: 10px;
+    font-size: 18px;
     margin-top: 10px;
+    h3 {
+      text-align: center;
+    }
   }
 
   .shadowBox {
@@ -69,9 +73,12 @@ import { RouterLink } from "vue-router";
     .info {
       display: flex;
       flex-direction: column;
-      gap: 30px;
-      font-size: 18px;
+      gap: 15px;
+      font-size: 16px;
     }
   }
 }
+
+@import "./mediaCateringComponent";
+
 </style>
