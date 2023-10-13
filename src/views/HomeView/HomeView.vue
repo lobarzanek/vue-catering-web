@@ -85,34 +85,6 @@ getHomeData();
     text-decoration: none;
   }
 }
-
- .test{
-  width: 700px;
-  height: 100px;
-  justify-content: center;
-  margin: auto;
-  display: flex;
-  border: 1px groove black;
-  border-radius: 20px;
-  background-color: #26ad60;
-  transition: 500ms;
-  margin-top: 50px;
-  margin-bottom: 50px;
-  font-size: 63px;
-  &:hover{
-    background-color: #435334;
-    transition: 500ms;
-  }
-  &:visited{
-    color:black;
-    text-decoration: none;
-  }
-  &:link{
-    color: black;
-    text-decoration: none;
-  }
-}
-
 .HomeView {
   display: flex;
   flex-direction: column;

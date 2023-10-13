@@ -134,19 +134,35 @@ textarea {
   padding: 5px;
 }
 .send {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  margin: auto;
   width: 150px;
   height: 20px;
-  justify-content: center;
-  margin: auto;
-  display: flex;
-  border: 1px groove black;
-  border-radius: 20px;
+  margin-top: 15px;
+  padding: 12px;
   background-color: #26ad60;
-  transition: 500ms;
-  &:hover{
-    color: white;
-    background-color: #435334;
-    transition: 500ms;
+  box-shadow: 2px 4px 6px 1px #01111170;
+  color: #fff;
+  font-size: 10px;
+  text-transform: uppercase;
+  border-radius: 8px;
+  border: none;
+  transition: 0.3 easy color, 0.3 easy background-color;
+  
+  &:hover {
+    cursor: pointer;
+    background-color: #1d8048;
+  }
+  &:visited{
+    color:black;
+    text-decoration: none;
+  }
+  &:link{
+    color: black;
+    text-decoration: none;
   }
 }
 </style>
