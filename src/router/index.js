@@ -46,7 +46,7 @@ const router = createRouter({
     {
       path: "/register",
       name: "register",
-      component: () => import("@/views/RegisterPage/RegisterView.vue")
+      component: () => import("@/views/RegisterView/RegisterView.vue")
     }
   ],
   linkActiveClass: "active-route",
