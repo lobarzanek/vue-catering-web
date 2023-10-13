@@ -51,9 +51,10 @@ await getAboutUsData();
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  gap: 30px;
+  gap: 20px;
   margin-top: 20px;
   h1 {
+    font-size: 24px;
     text-transform: uppercase;
   }
 
@@ -62,7 +63,8 @@ await getAboutUsData();
     justify-content: center;
     align-items: center;
     flex-direction: row;
-    gap: 80px;
+    flex-wrap: wrap;
+    gap: 30px;
     margin-bottom: 40px;
   }
 }
@@ -72,4 +74,7 @@ await getAboutUsData();
   align-items: center;
   margin: 20px 60px;
 }
+
+@import '@/views/AboutView/mediaAboutview.scss';
+
 </style>
