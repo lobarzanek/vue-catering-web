@@ -57,7 +57,6 @@ await getDietsData();
     margin-bottom: 20px;
   }
   .dietCards {
-    width: 100vw;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
