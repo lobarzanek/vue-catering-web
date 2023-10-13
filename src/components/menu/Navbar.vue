@@ -20,7 +20,9 @@ const userIcon = "src/images/user-svgrepo-com.svg";
       <RouterLink to="/cart" class="nav-link"
         ><NavbarItem :iconSrc="cartIcon" :counter="true"></NavbarItem
       ></RouterLink>
-      <NavbarItem :iconSrc="userIcon"></NavbarItem>
+      <RouterLink to="/login" class="nav-link">
+        <NavbarItem :iconSrc="userIcon" ></NavbarItem>
+      </RouterLink>
     </div>
   </header>
 </template>

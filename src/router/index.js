@@ -8,7 +8,6 @@ const router = createRouter({
       name: "home",
       component: () => import("@/views/HomeView/HomeView.vue"),
     },
-
     {
       path: "/diet",
       name: "diet",
@@ -39,6 +38,11 @@ const router = createRouter({
       name: "cart",
       component: () => import("@/views/CartView/CartView.vue"),
     },
+    {
+      path: "/login",
+      name: "login",
+      component: () => import("@/views/LoginView/LoginView.vue"),
+    }
   ],
   linkActiveClass: "active-route",
 });

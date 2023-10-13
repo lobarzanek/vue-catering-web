@@ -53,6 +53,40 @@ getHomeData();
   margin-bottom: 2rem;
 }
 .button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  margin: auto;
+  width: 700px;
+  height: 100px;
+  margin-top: 15px;
+  padding: 12px;
+  background-color: #26ad60;
+  box-shadow: 2px 4px 6px 1px #01111170;
+  color: #fff;
+  font-size: 50px;
+  font-weight: 600;
+  text-transform: uppercase;
+  border-radius: 8px;
+  border: none;
+  transition: 0.3 easy color, 0.3 easy background-color;
+  
+  &:hover {
+    cursor: pointer;
+    background-color: #1d8048;
+  }
+  &:visited{
+    color:black;
+    text-decoration: none;
+  }
+  &:link{
+    color: black;
+    text-decoration: none;
+  }
+}
+
+ .test{
   width: 700px;
   height: 100px;
   justify-content: center;
