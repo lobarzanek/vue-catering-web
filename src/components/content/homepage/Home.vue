@@ -45,7 +45,6 @@ text-align: center;
 padding: 10px;
 width: 280px;
 overflow: hidden;
-align: left;
 }
 .card{
 opacity: 50%;

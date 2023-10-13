@@ -50,6 +50,7 @@ getHomeData();
   height: 100px;
   margin:auto;
   margin-top: 1rem;
+  margin-bottom: 2rem;
 }
 .button {
   width: 700px;
