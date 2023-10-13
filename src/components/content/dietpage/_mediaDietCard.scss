@@ -1,0 +1,23 @@
+@media (min-width: 768px) {
+  .card {
+    height: 500px;
+    width: 270px;
+
+    .card-img {
+      width: 200px;
+    }
+
+    .title {
+      font-size: 22px;
+    }
+  }
+}
+@media (min-width: 992px) {
+  .card {
+    transition: all 0.3s ease-in-out;
+
+    &:hover {
+      transform: scale(1.10);
+    }
+  }
+}

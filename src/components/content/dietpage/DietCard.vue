@@ -74,24 +74,21 @@ defineProps({
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  height: 500px;
-  width: 270px;
+  height: 450px;
+  width: 220px;
   border-radius: 8px;
   box-shadow: 2px 4px 10px 1px #01111170;
   overflow: hidden;
-  transition: all 0.3s ease-in-out;
-
-  &:hover {
-    transform: scale(1.15);
-  }
+  
 
   .card-img {
+    width: 130px;
     margin-bottom: 20px;
   }
 
   .title {
     margin-bottom: 15px;
-    font-size: 22px;
+    font-size: 20px;
     font-weight: bold;
   }
 
@@ -136,4 +133,6 @@ defineProps({
     }
   }
 }
+
+@import '@/components/content/dietpage/mediaDietCard.scss'
 </style>

@@ -52,6 +52,10 @@ await getDietsData();
   justify-content: center;
   align-items: center;
   padding-top: 20px;
+  h1{
+    font-size: 26px;
+    margin-bottom: 20px;
+  }
   .dietCards {
     width: 100vw;
     display: flex;
@@ -59,8 +63,7 @@ await getDietsData();
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
-    margin: 45px 0;
-    gap: 70px;
+    gap: 30px;
   }
 }
 .errorHandler {
@@ -69,4 +72,6 @@ await getDietsData();
   align-items: center;
   margin: 20px 60px;
 }
+
+@import '@/views/DietView/mediaDietView.scss';
 </style>
