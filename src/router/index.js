@@ -42,6 +42,11 @@ const router = createRouter({
       path: "/login",
       name: "login",
       component: () => import("@/views/LoginView/LoginView.vue"),
+    },
+    {
+      path: "/register",
+      name: "register",
+      component: () => import("@/views/RegisterPage/RegisterView.vue")
     }
   ],
   linkActiveClass: "active-route",
