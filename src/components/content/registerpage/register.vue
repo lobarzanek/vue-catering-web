@@ -50,14 +50,12 @@ function ValidateEmail() {
     width: 500px;
     height: 600px;
     margin-top: 4rem;
-    background-color: black;
     padding: 10px;
     border: 1px groove white;
-    box-shadow: 1px 5px 10px 15px black;
+    box-shadow: 2px 4px 10px 1px #01111170;
 }
  
 .register{
-    background-color: grey;
     width: 400px;
     height: 500px;
     margin: auto;
@@ -70,13 +68,13 @@ function ValidateEmail() {
     border: 1px groove black;
     border-radius: 15px;
     padding: 10px;
-    transition: 600ms;
+    transition: 300ms;
     font-size:large;
     outline: none;
     &:focus{
         border-radius: 0;
         transition: 500ms;
-        border: 3px solid greenyellow;
+        border: 1px solid #26ad60;
     }
 }
  
@@ -89,14 +87,28 @@ label{
 }
  
 .registerBtn{
-    margin: auto;
     display: flex;
+    align-items: center;
     justify-content: center;
-    margin-top: 5%;
-    width: 40%;
-    background-color: green;
-    font-size: large;
-    border: 2px groove black;
-    border-radius: 10px;
-}
+    text-align: center;
+    margin: auto;
+    width: 150px;
+    height: 45px;
+    margin-top: 35px;
+    padding: 12px;
+    background-color: #26ad60;
+    box-shadow: 2px 4px 6px 1px #01111170;
+    color: #fff;
+    font-size: 14px;
+    font-weight: 600;
+    text-transform: uppercase;
+    border-radius: 8px;
+    border: none;
+    transition: 0.3 easy color, 0.3 easy background-color;
+
+    &:hover {
+      cursor: pointer;
+      background-color: #1d8048;
+    }
+  }
 </style>
