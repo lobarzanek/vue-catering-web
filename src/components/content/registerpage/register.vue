@@ -1,12 +1,12 @@
 <script setup>
 function register(){
  
- ValidateEmail();
+
      const password = document.querySelector('.password');
      const password2 = document.querySelector('.password2');
 
-     if(password.value !== password2.value){
-         alert("Hasła są różne!")
+     if(password.value !== password2.value ||  !ValidateEmail()){
+         alert("Niepoprawne dane.")
      }
      else{
          alert("Konto zostało założone pomyślnie, możesz sie zalogować")
@@ -37,7 +37,7 @@ function ValidateEmail() {
                 <label for="password2">Powtorz hasło</label>
                 <input type="password" class="password2" placeholder="*****">
             </form>
-            <button class="registerBtn" onclick="register()">Załóż konto</button>
+            <button @click="register()" class="registerBtn" onclick="register()">Załóż konto</button>
         </div>
     </div>
 </template>
