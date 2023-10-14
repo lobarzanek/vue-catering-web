@@ -5,14 +5,14 @@ export default {
   name: "Login",
   data() {
     return {
-      email: '',
+      name: '',
       password: ''
     }
   },
   methods:{
     async login() {
       let result = await axios.get(
-        `http://localhost:3000/users?email=${this.email}&password=${this.password}`
+        `http://localhost:3000/users?login=${this.login}&password=${this.password}`
       )
       if(result.status==200 && result.data.length>0){
             localStorage.setItem("userInformation",JSON.stringify(result.data))
@@ -30,7 +30,7 @@ export default {
     <div class="form">
       <form>
         <label for="login">Login</label>
-        <input type="text" v-model="email" class="login" placeholder="Użytkownik">
+        <input type="text" v-model="name" class="login" placeholder="Użytkownik">
         <label for="password">Hasło</label>
         <input type="password" v-model="password" class="password" placeholder="*****">
       </form>

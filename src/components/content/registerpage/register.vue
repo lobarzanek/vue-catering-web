@@ -4,7 +4,7 @@ export default{
     name: 'SignUp',
     Data() {
     return{
-        login:'',
+        name:'',
         email:'',
         password:'',
         password2:''
@@ -13,7 +13,7 @@ export default{
 methods:{
     async signUp() {
         let result = await axios.post("http://localhost:3000/users",{
-            login:this.name,
+            name:this.name,
             email:this.email,
             password:this.password,
             password2:this.password2
@@ -57,7 +57,7 @@ methods:{
         <div class="register">
             <form>
                 <label for="login">Login</label>
-                <input type="text" v-model="login" class="login" placeholder="Użytkownik">
+                <input type="text" v-model="name" class="login" placeholder="Użytkownik">
                 <label for="email">Email</label>
                 <input type="text" v-model="email" class="email" id="inputEmail" placeholder="email@wp.pl">
                 <label for="password">Hasło</label>
