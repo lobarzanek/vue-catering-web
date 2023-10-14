@@ -1,27 +1,54 @@
-<script setup>
-function register(){
- 
-
-     const password = document.querySelector('.password');
-     const password2 = document.querySelector('.password2');
-
-     if(password.value !== password2.value ||  !ValidateEmail()){
-         alert("Niepoprawne dane.")
-     }
-     else{
-         alert("Konto zostało założone pomyślnie, możesz sie zalogować")
-     }
+<script>
+import axios from 'axios'
+export default{
+    name: 'SignUp',
+    Data() {
+    return{
+        login:'',
+        email:'',
+        password:'',
+        password2:''
+    }
+},
+methods:{
+    async signUp() {
+        let result = await axios.post("http://localhost:3000/users",{
+            login:this.name,
+            email:this.email,
+            password:this.password,
+            password2:this.password2
+        });
+        console.log(result);
+        if(result.status==201){
+            alert("Konto zostało założone");
+            localStorage.setItem("userInformation",JSON.stringify(result.data))
+        }
+    }
 }
-
-function ValidateEmail() {
- var mailformat = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
-
- if (inputEmail.value.match(mailformat)) {
-   return true;
- } else {
-   return false;
- }
 }
+// function register(){
+
+
+//      const password = document.querySelector('.password');
+//      const password2 = document.querySelector('.password2');
+
+//      if(password.value !== password2.value ||  !ValidateEmail()){
+//          alert("Niepoprawne dane.")
+//      }
+//      else{
+//          alert("Konto zostało założone pomyślnie, możesz sie zalogować")
+//      }
+// }
+
+// function ValidateEmail() {
+//  var mailformat = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+
+//  if (inputEmail.value.match(mailformat)) {
+//    return true;
+//  } else {
+//    return false;
+//  }
+// }
 </script>
 
 <template>
@@ -29,15 +56,15 @@ function ValidateEmail() {
         <div class="register">
             <form>
                 <label for="login">Login</label>
-                <input type="text" class="login" placeholder="Użytkownik">
+                <input type="text" v-model="login" class="login" placeholder="Użytkownik">
                 <label for="email">Email</label>
-                <input type="text" class="email" id="inputEmail" placeholder="email@wp.pl" @input="(event) => (inputEmail = event.target.value)">
+                <input type="text" v-model="email" class="email" id="inputEmail" placeholder="email@wp.pl">
                 <label for="password">Hasło</label>
-                <input type="password" class="password" placeholder="*****">
+                <input type="password" v-model="password" class="password" placeholder="*****">
                 <label for="password2">Powtorz hasło</label>
-                <input type="password" class="password2" placeholder="*****">
+                <input type="password" v-model="password2" class="password2" placeholder="*****">
             </form>
-            <button @click="register()" class="registerBtn" onclick="register()">Załóż konto</button>
+            <button v-on:click="signUp" class="registerBtn">Załóż konto</button>
         </div>
     </div>
 </template>
