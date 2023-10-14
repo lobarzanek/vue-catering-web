@@ -50,7 +50,7 @@ export default {
   display: flex;
   justify-content: center;
   width: 500px;
-  height: 550px;
+  height: 450px;
   margin-top: 4rem;
   padding: 10px;
   border-radius: 8px;
