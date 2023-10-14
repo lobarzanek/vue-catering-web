@@ -22,6 +22,7 @@ methods:{
         if(result.status==201){
             alert("Konto zostało założone");
             localStorage.setItem("userInformation",JSON.stringify(result.data))
+            this.$router.push('/login')
         }
     }
 }

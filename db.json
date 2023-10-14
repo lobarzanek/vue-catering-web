@@ -185,6 +185,12 @@
       "password": "1",
       "password2": "1",
       "id": 3
+    },
+    {
+      "email": "p5@wp.pl",
+      "password": "5",
+      "password2": "5",
+      "id": 4
     }
   ]
 }

@@ -16,7 +16,7 @@ export default {
       )
       if(result.status==200 && result.data.length>0){
             localStorage.setItem("userInformation",JSON.stringify(result.data))
-            this.$router.push({name:'Home.vue'})
+            this.$router.push('/')
         }
         else{
           alert("Niepoprawny login lub hasło.")
