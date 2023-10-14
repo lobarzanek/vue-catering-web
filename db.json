@@ -168,44 +168,23 @@
   ],
   "users": [
     {
+      "login": "Andrzej",
       "email": "emial@wp.pl",
-      "name": "Andrzej",
       "password": "123",
       "password2": "123",
       "id": 1
     },
     {
-      "email": "Przemek@wp.pl",
-      "password": "123",
-      "password2": "123",
+      "email": "p1@wp.pl",
+      "password": "12",
+      "password2": "12",
       "id": 2
     },
     {
-      "login": "Andrzej",
-      "email": "emial@wp.pl",
-      "password": "123",
-      "password2": "123",
+      "email": "p@wp.pl",
+      "password": "1",
+      "password2": "1",
       "id": 3
-    },
-    {
-      "email": "Przemek@wp.pl",
-      "password": "123",
-      "password2": "123",
-      "id": 4
-    },
-    {
-      "login": "Andrzej",
-      "email": "emial@wp.pl",
-      "password": "123",
-      "password2": "123",
-      "id": 5
-    },
-    {
-      "login": "Andrzej",
-      "email": "emial@wp.pl",
-      "password": "123",
-      "password2": "123",
-      "id": 6
     }
   ]
 }
