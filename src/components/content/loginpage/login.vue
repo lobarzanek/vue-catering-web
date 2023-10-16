@@ -11,17 +11,17 @@ export default {
   },
   methods:{
     async login() {
-      let result = await axios.get(
-        `http://localhost:3000/users?login=${this.login}&password=${this.password}`
-      )
-      if(result.status==200 && result.data.length>0){
+        let result = await axios.get(
+          `http://localhost:3000/users?name=${this.name}&password=${this.password}`
+          )
+          if(result.status==200 && result.data.length>0){
             localStorage.setItem("userInformation",JSON.stringify(result.data))
             this.$router.push('/')
         }
         else{
           alert("Niepoprawny login lub hasło.")
         }
-    }
+      }
   }
 };
 </script>
