@@ -18,7 +18,6 @@ methods:{
             password:this.password,
             password2:this.password2
         });
-        console.log(result);
         if(result.status==201){
             alert("Konto zostało założone");
             localStorage.setItem("userInformation",JSON.stringify(result.data))
