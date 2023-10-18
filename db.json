@@ -168,18 +168,20 @@
   ],
   "users": [
     {
-      "name": "Andrzej",
-      "email": "email@wp.pl",
-      "password": "123",
-      "password2": "123",
-      "id": 1
+      "firstName": "Andrzej",
+      "name": "endrju",
+      "email": "andrzej@wp.pl",
+      "password": "1",
+      "password2": "1",
+      "id": 3
     },
     {
+      "firstName": "test",
       "name": "p",
       "email": "p@wp.pl",
       "password": "1",
       "password2": "1",
-      "id": 2
+      "id": 4
     }
   ]
 }

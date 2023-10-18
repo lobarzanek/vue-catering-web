@@ -5,6 +5,7 @@ export default {
   name: "Login",
   data() {
     return {
+      firstName:'',
       name: '',
       password: ''
     }
@@ -16,6 +17,7 @@ export default {
           )
           if(result.status==200 && result.data.length>0){
             localStorage.setItem("userInformation",JSON.stringify(result.data))
+            alert("Witaj! \n zostaniesz przeniesiony na strone główna")
             this.$router.push('/')
         }
         else{

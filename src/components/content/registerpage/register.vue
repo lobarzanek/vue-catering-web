@@ -4,6 +4,7 @@ export default{
     name: 'SignUp',
     Data() {
     return{
+        firstName:'',
         name:'',
         email:'',
         password:'',
@@ -12,7 +13,18 @@ export default{
 },
 methods:{
     async signUp() {
+        if (
+      !this.firstName ||
+      !this.name ||
+      !this.email ||
+      !this.password ||
+      !this.password2
+    ) {
+      alert("Wszystkie pola muszą być wypełnione.");
+      return;
+    }
         let result = await axios.post("http://localhost:3000/users",{
+            firstName:this.firstName,
             name:this.name,
             email:this.email,
             password:this.password,
@@ -55,6 +67,8 @@ methods:{
     <div class="mainRegister">
         <div class="register">
             <form>
+                <label for="fistName">Imię</label>
+                <input type="text" v-model="firstName" class="firstName" placeholder="Imię">
                 <label for="login">Login</label>
                 <input type="text" v-model="name" class="login" placeholder="Użytkownik">
                 <label for="email">Email</label>
@@ -75,9 +89,10 @@ methods:{
     display: flex;
     justify-content: center;
     width: 500px;
-    height: 600px;
-    margin-top: 4rem;
-    padding: 10px;
+    height: 650px;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    padding: 4px;
     border: 1px groove white;
     box-shadow: 2px 4px 10px 1px #01111170;
 }
@@ -89,7 +104,7 @@ methods:{
     padding: 20px;
 }
  
-.login, .email, .password, .password2{
+.firstName, .login, .email, .password, .password2{
     width: 350px;
     height: 50px;
     border: 1px groove black;
