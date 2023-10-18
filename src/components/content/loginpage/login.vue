@@ -16,7 +16,6 @@ export default {
           )
           if(result.status==200 && result.data.length>0){
             localStorage.setItem("userInformation",JSON.stringify(result.data))
-            console.log(JSON.stringify(result.data))
             alert("Witaj " + (result.data[0].firstName + "!\nZostaniesz przeniesiony na strone główną."))
             this.$router.push('/')
         }
