@@ -78,7 +78,9 @@ methods:{
                 <label for="password2">Powtorz hasło</label>
                 <input type="password" v-model="password2" class="password2" placeholder="*****">
             </form>
-            <button v-on:click="signUp" class="registerBtn">Załóż konto</button>
+            <div class="registerBtnDiv">
+                <button v-on:click="signUp" class="registerBtn">Załóż konto</button>
+            </div>
         </div>
     </div>
 </template>
@@ -89,7 +91,7 @@ methods:{
     display: flex;
     justify-content: center;
     width: 500px;
-    height: 650px;
+    height: 600px;
     margin-top: 2rem;
     margin-bottom: 2rem;
     padding: 4px;
@@ -102,6 +104,7 @@ methods:{
     height: 500px;
     margin: auto;
     padding: 20px;
+    margin-top: -10px;
 }
  
 .firstName, .login, .email, .password, .password2{
@@ -152,5 +155,11 @@ label{
       cursor: pointer;
       background-color: #1d8048;
     }
+  }
+
+  .registerBtnDiv{
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
 </style>
