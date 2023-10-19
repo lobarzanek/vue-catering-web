@@ -61,6 +61,7 @@ getHomeData();
   width: 700px;
   height: 100px;
   margin-top: 15px;
+  margin-bottom: 30px;
   padding: 12px;
   background-color: #26ad60;
   box-shadow: 2px 4px 6px 1px #01111170;
