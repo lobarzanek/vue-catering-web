@@ -58,4 +58,7 @@ border-radius: 10%;
   transition: 500ms;
 }
 }
+
+@import "@/components/content/homepage/mediaAboutHome.scss";
+
 </style>

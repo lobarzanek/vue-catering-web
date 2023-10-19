@@ -106,4 +106,6 @@ getHomeData();
   gap: 30px;
   margin-bottom: 32px;
 }
+
+//@import '@/views/HomeView/mediaAboutHome.scss';
 </style>
