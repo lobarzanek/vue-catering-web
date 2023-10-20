@@ -1,6 +1,12 @@
-@media (min-width: 150px){
-    .card{
-        
+@media (min-width: 768px) {
+  .dinner {
+    h1 {
+      font-size: 32px;
     }
-    }
-    
+  }
+  .card {
+    width: 255px;
+    height: 270px;
+  }
+}
+

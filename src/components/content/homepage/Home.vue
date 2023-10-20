@@ -44,12 +44,16 @@ text-align: center;
 padding: 10px;
 width: 280px;
 overflow: hidden;
+h1{
+  font-size: 26px;
+  padding-bottom: 5px;
+}
 }
 .card{
 opacity: 50%;
 transition: 1s;
-width: 255px;
-height: 270px;
+width: 180px;
+height: 195px;
 border: 1px groove black;
 border-radius: 10%;
 

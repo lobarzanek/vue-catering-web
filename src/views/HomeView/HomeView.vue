@@ -18,24 +18,24 @@ const getHomeData = () => {
 getHomeData();
 </script>
 <template>
-   <div class="errorHandler" v-if="eHandler">
+  <div class="errorHandler" v-if="eHandler">
     <ErrorHandler></ErrorHandler>
-  </div> 
+  </div>
   <div class="HomeView" v-else>
     <img src="@/images/logo.svg" alt="" class="logo" />
     <div class="dinnerView">
       <Home
-      v-for="(item, index) in data"
-      :id="item.id"
-      :title="item.title"
-      :img="item.img"
-      :opinion="item.opinion"
-      :comment="item.comment"
-      :key="index"
+        v-for="(item, index) in data"
+        :id="item.id"
+        :title="item.title"
+        :img="item.img"
+        :opinion="item.opinion"
+        :comment="item.comment"
+        :key="index"
       ></Home>
     </div>
     <RouterLink to="/diet" class="button">Zamów nasze diety!</RouterLink>
-    </div>
+  </div>
 </template>
 
 <style scoped lang="scss">
@@ -48,9 +48,7 @@ getHomeData();
 .logo {
   width: 100%;
   height: 100px;
-  margin:auto;
-  margin-top: 1rem;
-  margin-bottom: 2rem;
+  padding: 12px;
 }
 .button {
   display: flex;
@@ -58,30 +56,30 @@ getHomeData();
   justify-content: center;
   text-align: center;
   margin: auto;
-  width: 700px;
-  height: 100px;
+  width: 250px;
+  height: 70px;
   margin-top: 15px;
   margin-bottom: 30px;
   padding: 12px;
   background-color: #26ad60;
   box-shadow: 2px 4px 6px 1px #01111170;
   color: #fff;
-  font-size: 50px;
+  font-size: 20px;
   font-weight: 600;
   text-transform: uppercase;
   border-radius: 8px;
   border: none;
   transition: 0.3 easy color, 0.3 easy background-color;
-  
+
   &:hover {
     cursor: pointer;
     background-color: #1d8048;
   }
-  &:visited{
-    color:black;
+  &:visited {
+    color: black;
     text-decoration: none;
   }
-  &:link{
+  &:link {
     color: black;
     text-decoration: none;
   }
@@ -92,7 +90,7 @@ getHomeData();
   justify-content: center;
   align-items: center;
   padding-top: 20px;
-  h1{
+  h1 {
     font-size: 26px;
     margin-bottom: 20px;
   }
@@ -107,5 +105,5 @@ getHomeData();
   margin-bottom: 32px;
 }
 
-//@import '@/views/HomeView/mediaAboutHome.scss';
+@import '@/views/HomeView/mediaAboutHome.scss';
 </style>
