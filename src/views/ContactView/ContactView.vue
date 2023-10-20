@@ -8,15 +8,20 @@ import Contactus from '@/components/content/contact/Contactus.vue';
 const data = ref([]);
 const eHandler = ref(true);
 
-const getContactData = () => {
-  axios.get("http://localhost:3000/contactus").then((response) => {
-    if (response.statusText == "OK") {
-      eHandler.value = false;
-      data.value = response.data;
-    }
-  });
+const getContactData = async () => {
+  try{
+
+    await axios.get("http://localhost:3000/contactus").then((response) => {
+      if (response.statusText == "OK") {
+        eHandler.value = false;
+        data.value = response.data;
+      }
+    });
+  }catch{
+    return
+  }
 };
-getContactData();
+await getContactData();
 </script>
 
 <template>

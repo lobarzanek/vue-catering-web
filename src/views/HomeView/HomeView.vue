@@ -7,15 +7,19 @@ import ErrorHandler from "@/components/content/errorHandler/ErrorHandler.vue";
 const data = ref([]);
 const eHandler = ref(true);
 
-const getHomeData = () => {
-  axios.get("http://localhost:3000/home").then((response) => {
-    if (response.statusText == "OK") {
-      eHandler.value = false;
-      data.value = response.data;
-    }
-  });
+const getHomeData = async () => {
+  try {
+    await axios.get("http://localhost:3000/home").then((response) => {
+      if (response.statusText == "OK") {
+        eHandler.value = false;
+        data.value = response.data;
+      }
+    });
+  } catch {
+    return;
+  }
 };
-getHomeData();
+await getHomeData();
 </script>
 <template>
   <div class="errorHandler" v-if="eHandler">
@@ -105,5 +109,5 @@ getHomeData();
   margin-bottom: 32px;
 }
 
-@import '@/views/HomeView/mediaAboutHome.scss';
+@import "@/views/HomeView/mediaAboutHome.scss";
 </style>
