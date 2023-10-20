@@ -90,17 +90,18 @@ methods:{
     margin: auto;
     display: flex;
     justify-content: center;
-    width: 500px;
-    height: 600px;
+    width: 315px;
+    height: 550px;
     margin-top: 2rem;
     margin-bottom: 2rem;
     padding: 4px;
     border: 1px groove white;
+    border-radius: 5%;
     box-shadow: 2px 4px 10px 1px #01111170;
 }
  
 .register{
-    width: 400px;
+    width: 300px;
     height: 500px;
     margin: auto;
     padding: 20px;
@@ -108,8 +109,8 @@ methods:{
 }
  
 .firstName, .login, .email, .password, .password2{
-    width: 350px;
-    height: 50px;
+    width: 260px;
+    height: 45px;
     border: 1px groove black;
     border-radius: 15px;
     padding: 10px;
@@ -128,7 +129,7 @@ label{
     margin-bottom: 5px;
     margin-top: 10px;
     margin-left: 5px;
-    font-size: 20px;
+    font-size: 15px;
 }
  
 .registerBtn{
@@ -138,13 +139,13 @@ label{
     text-align: center;
     margin: auto;
     width: 150px;
-    height: 45px;
-    margin-top: 35px;
+    height: 35px;
+    margin-top: 25px;
     padding: 12px;
     background-color: #26ad60;
     box-shadow: 2px 4px 6px 1px #01111170;
     color: #fff;
-    font-size: 14px;
+    font-size: 12px;
     font-weight: 600;
     text-transform: uppercase;
     border-radius: 8px;
@@ -162,4 +163,7 @@ label{
     justify-content: center;
     align-items: center;
   }
+
+  @import '@/components/content/registerpage/mediaAboutRegister.scss';
+
 </style>

@@ -56,6 +56,7 @@ export default {
   padding: 10px;
   border-radius: 8px;
   box-shadow: 2px 4px 10px 1px #01111170;
+  border-radius: 15px;
 }
 
 .form {
@@ -123,14 +124,14 @@ label {
   justify-content: center;
   text-align: center;
   margin: auto;
-  width: 200px;
+  width: 180px;
   height: 40px;
   margin-top: 15px;
   padding: 12px;
   background-color: #26ad60;
   box-shadow: 2px 4px 6px 1px #01111170;
   color: #fff;
-  font-size: 10px;
+  font-size: 12px;
   font-weight: 600;
   text-transform: uppercase;
   border-radius: 8px;
