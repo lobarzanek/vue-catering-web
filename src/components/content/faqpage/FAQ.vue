@@ -102,4 +102,7 @@ svg{
         transform: translateY(0px);
     }
 }
+
+@import '@/components/content/faqpage/mediaAboutFAQ.scss';
+
 </style>
