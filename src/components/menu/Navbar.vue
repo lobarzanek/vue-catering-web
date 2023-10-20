@@ -10,7 +10,6 @@ const isActive = ref(false);
 
 const showMenu = () => {
   if (window.innerWidth < 768) {
-    console.log("XD");
     isActive.value = !isActive.value;
   } else {
     isActive.value = false;
