@@ -26,7 +26,7 @@ const toggleClass = () =>{
   <div class="faq" :class="{active: toggle}" @click="toggleClass()">
     <div class="question">
       <h3>{{ question }}</h3>
-      <svg @click="{}" width="40" height="20" viewBox="0 0 42 25">
+      <svg @click="{}" width="50" height="10" viewBox="0 0 42 25">
         <path
           d="M3 3L21 21L39 3"
           stroke="white"
@@ -56,6 +56,9 @@ const toggleClass = () =>{
       margin-top: 2%;
       border-top: 2px solid black;
     }
+    &:last-child{
+      margin-bottom: 5%;
+    }
     &.active{
       svg{
         transform: rotate(180deg);
@@ -72,8 +75,9 @@ const toggleClass = () =>{
     display: flex;
     align-items: center;
     padding: 5px;
+    height: 50px;
     h3{
-      font-size: 1.4rem;
+      font-size: 0.9rem;
     }
 }
 
@@ -84,7 +88,7 @@ const toggleClass = () =>{
     padding: 5px;
     p{
       line-height: 1.7;
-      font-size: 1.4rem;
+      font-size: 1rem;
     }
 }
 

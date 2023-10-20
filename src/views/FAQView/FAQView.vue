@@ -48,9 +48,13 @@ getFAQData();
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  .logo {
-    margin-top: 20px;
-    height: 100px;
-  }
 }
+.logo {
+  margin-top: 5px;
+  height: 100px;
+  width: 100%;
+  padding: 20px;
+}
+
+@import '@/views/FAQView/_mediaAboutFAQ.scss';
 </style>
