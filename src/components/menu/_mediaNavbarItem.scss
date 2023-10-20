@@ -1,0 +1,17 @@
+@media (min-width: 768px) {
+  .navbarItem {
+    height: 40px;
+    width: 40px;
+    img {
+      width: 24px;
+    }
+    .counter {
+      width: 18px;
+      height: 18px;
+      font-size: 12px;
+      line-height: 18px;
+    }
+  }
+}
+@media (min-width: 992px) {
+}
