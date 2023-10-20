@@ -50,8 +50,8 @@ export default {
   margin: auto;
   display: flex;
   justify-content: center;
-  width: 500px;
-  height: 450px;
+  width: 315px;
+  height: 380px;
   margin-top: 4rem;
   padding: 10px;
   border-radius: 8px;
@@ -59,17 +59,16 @@ export default {
 }
 
 .form {
-  width: 400px;
+  width: 290px;
   height: 450px;
   margin: auto;
-  padding: 20px;
+  padding: 10px;
 }
 
 .login,
-.password,
-.email {
-  width: 350px;
-  height: 50px;
+.password{
+  width: 260px;
+  height: 45px;
   border: 1px groove black;
   border-radius: 15px;
   padding: 10px;
@@ -89,7 +88,7 @@ label {
   margin-bottom: 5px;
   margin-top: 10px;
   margin-left: 5px;
-  font-size: 20px;
+  font-size: 15px;
 }
 
 .log-in {
@@ -99,13 +98,13 @@ label {
   text-align: center;
   margin: auto;
   width: 150px;
-  height: 45px;
+  height: 40px;
   margin-top: 35px;
   padding: 12px;
   background-color: #26ad60;
   box-shadow: 2px 4px 6px 1px #01111170;
   color: #fff;
-  font-size: 14px;
+  font-size: 12px;
   font-weight: 600;
   text-transform: uppercase;
   border-radius: 8px;
@@ -125,13 +124,13 @@ label {
   text-align: center;
   margin: auto;
   width: 200px;
-  height: 45px;
+  height: 40px;
   margin-top: 15px;
   padding: 12px;
   background-color: #26ad60;
   box-shadow: 2px 4px 6px 1px #01111170;
   color: #fff;
-  font-size: 14px;
+  font-size: 10px;
   font-weight: 600;
   text-transform: uppercase;
   border-radius: 8px;
@@ -148,7 +147,7 @@ label {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  width: 350px;
+  width: 260px;
   align-items: center;
 }
 
@@ -156,4 +155,6 @@ label {
   color: white;
   text-decoration: none;
 }
+
+@import '@/components/content/loginpage/mediaAboutLogin.scss';
 </style>
