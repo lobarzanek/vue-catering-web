@@ -97,12 +97,12 @@ function ValidateName() {
   text-align: center;
   padding: 1rem;
   display: flexbox;
-  width: 50%;
+  width: 100%;
 }
 
 textarea,input,.send,.section {
-  margin-top: 10px;
-  margin-bottom: 10px;
+  margin-top: 5px;
+  margin-bottom: 1px;
   box-shadow: 1px 1px 10px 1px black;
 }
 
@@ -120,7 +120,7 @@ span {
 
 input, .section {
   width: 80%;
-  height: 50px;
+  height: 40px;
   border: 1px groove black;
   border-radius: 15px;
   padding: 5px;
@@ -165,4 +165,5 @@ textarea {
     text-decoration: none;
   }
 }
+@import '@/components/content/contact/mediaAboutContact.scss';
 </style>

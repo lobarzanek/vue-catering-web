@@ -23,8 +23,11 @@ getContactData();
     <div class="errorHandler" v-if="eHandler">
         <ErrorHandler></ErrorHandler>
       </div>
-      <div v-else class="contactView">
+      <div v-else class="middleView">
+        <div class="contactView">
+        </div>
             <Contact></Contact>
+            
           <div class="contactus">
               <contactus
               v-for="item in data"
@@ -35,23 +38,23 @@ getContactData();
               :emailUs="item.emailUs"
               ></contactus>
             </div> 
-      </div>
-
-
+          </div>
 </template>
 
 <style scoped>
+@import '@/views/ContactView/mediaAboutContact.scss';
 .errorHandler {
     display: flex;
     justify-content: center;
     align-items: center;
     margin: 20px 60px;
 }
-.contactView{
-    display: flex;
+.middleView{
+  display: flexbox-inline;
 }
 
 .contactus{
+    display: flex;
     justify-content: center;
     flex-direction: column;
     align-items: center;
@@ -59,4 +62,5 @@ getContactData();
     margin: auto;
     margin-top: 1rem;
 }
+
 </style>

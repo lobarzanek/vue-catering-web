@@ -37,10 +37,21 @@ defineProps({
 .aboutus{
     justify-content: center;
     text-align: center;
-    padding: 1rem;
+    padding: 12px;
     display: flexbox;
     border-radius: 15px;
     margin-bottom: 30px;
     box-shadow: 1px 1px 1px 1px #26ad60;
 }
+h2{
+  font-size: 18px;
+}
+h3{
+  font-size: 16px
+}
+p{
+  font-size: 14px;
+}
+
+@import '@/components/content/contact/mediaAboutContactus.scss';
 </style>
