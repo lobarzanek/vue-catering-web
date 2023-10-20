@@ -51,13 +51,13 @@ const toggleClass = () =>{
     justify-content: center;
     flex-direction: column;
     align-items: center;
-    padding: 5px;
+    padding: 3px;
     &:first-child{
       margin-top: 2%;
       border-top: 2px solid black;
     }
     &:last-child{
-      margin-bottom: 5%;
+      margin-bottom: 0px;
     }
     &.active{
       svg{

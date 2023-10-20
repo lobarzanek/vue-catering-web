@@ -12,4 +12,10 @@
         font-size: 1.4rem;
     }
 }
+    .faq{
+        padding: 3px;
+        &:last-child{
+            margin-bottom: 5%;
+          }
+    }
 }
