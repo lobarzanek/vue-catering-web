@@ -1,15 +1,15 @@
 <script setup>
 import { useCounterStore } from "@/stores/counter";
-import ItemCard from "../components/content/cartpage/itemCard.vue";
-import Summary from "../components/content/cartpage/summary.vue";
-import Empty from "../components/content/cartpage/empty.vue";
+import ItemCard from "@/components/content/cartpage/itemCard.vue";
+import Summary from "@/components/content/cartpage/summary.vue";
+import Empty from "@/components/content/cartpage/empty.vue";
 
 const counter = useCounterStore();
 </script>
 
 <template>
-  <div class="cart">
-    <div class="items" v-if="counter.storeCounter.count > 0">
+  <div class="cart" v-if="counter.storeCounter.count > 0">
+    <div class="items">
       <ItemCard
         v-for="(item, index) in counter.cartData"
         :id="item.id"
@@ -23,10 +23,12 @@ const counter = useCounterStore();
         :key="index"
       ></ItemCard>
     </div>
-    <Empty v-else></Empty>
     <div class="summary">
       <Summary></Summary>
     </div>
+  </div>
+  <div class="cart" v-else>
+    <Empty></Empty>
   </div>
 </template>
 
@@ -34,7 +36,7 @@ const counter = useCounterStore();
 .cart {
   display: flex;
   justify-content: center;
-  flex-direction: row;
+  flex-direction: column;
   margin: 50px;
   .items {
     display: flex;
@@ -51,4 +53,6 @@ const counter = useCounterStore();
     flex-grow: 2;
   }
 }
+
+@import "@/views/CartView/_mediaCartView.scss";
 </style>

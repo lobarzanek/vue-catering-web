@@ -1,0 +1,18 @@
+@media (min-width: 922px){
+    .contact{
+        width: 50%;
+    }
+    input, .section {
+        height: 50px;
+    }
+    textarea,input,.send,.section {
+        margin-top: 10px;
+        margin-bottom: 10px;
+        box-shadow: 1px 1px 10px 1px black;
+    }
+    .send{
+        width: 45%;
+        height: 50px;
+        font-size: 15px;
+    }
+}

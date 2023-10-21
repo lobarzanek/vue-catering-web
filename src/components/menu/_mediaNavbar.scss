@@ -1,0 +1,103 @@
+@media (max-width: 767px) {
+  .top-bar {
+    display: none;
+    &.active {
+      position: absolute;
+      display: flex;
+      justify-content: start;
+      align-items: center;
+      flex-direction: column;
+      gap: 20px;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      background-color: #fff;
+      z-index: 2;
+
+      .nav-link {
+        text-decoration: none;
+        color: #000;
+      }
+
+      .wrapper {
+        margin-top: 20px;
+        width: 80vw;
+        display: flex;
+        justify-content: right;
+
+        .closeBtn {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          width: 30px;
+          aspect-ratio: 1;
+          border: none;
+          border-radius: 50%;
+          padding: 20px;
+          font-size: 20px;
+          font-weight: bold;
+          color: #fff;
+          background: #d8d8d8;
+          &:hover {
+            cursor: pointer;
+          }
+        }
+      }
+    }
+  }
+}
+@media (min-width: 768px) {
+  .navbar {
+    justify-content: space-between;
+    .logo {
+      display: none;
+    }
+    .top-bar {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-wrap: nowrap;
+      font-size: 20px;
+      flex-grow: 4;
+      .nav-link {
+        color: gray;
+        text-decoration: none;
+        padding: 5px 10px;
+        border-radius: 5px;
+        margin: 0 10px;
+        transition: background-color 0.1s ease-in-out, color 0.1s ease-in-out;
+
+        &:hover,
+        &.active-route {
+          background-color: #26ad60;
+          color: white;
+          cursor: pointer;
+        }
+      }
+      .closeBtn {
+        display: none;
+      }
+    }
+  }
+  .items {
+    justify-content: space-around;
+    flex-direction: row;
+    flex-grow: 0.2;
+    gap: 15px;
+
+    .menuBtn {
+      display: none;
+    }
+  }
+}
+@media (min-width: 992px) {
+  .navbar {
+    .logo {
+      display: block;
+      width: 180px;
+      margin-left: 25px;
+      flex-grow: 0.2;
+    }
+  }
+}

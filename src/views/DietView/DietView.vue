@@ -1,7 +1,7 @@
 <script async setup>
 import { ref } from "vue";
 import axios from "axios";
-import DietCard from "../components/content/dietpage/DietCard.vue";
+import DietCard from "@/components/content/dietpage/DietCard.vue";
 import ErrorHandler from "@/components/content/errorHandler/ErrorHandler.vue";
 
 const data = ref([]);
@@ -52,15 +52,18 @@ await getDietsData();
   justify-content: center;
   align-items: center;
   padding-top: 20px;
+  h1{
+    font-size: 26px;
+    margin-bottom: 20px;
+  }
   .dietCards {
-    width: 100vw;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
-    margin: 45px 0;
-    gap: 70px;
+    gap: 30px;
+    margin-bottom: 32px;
   }
 }
 .errorHandler {
@@ -69,4 +72,6 @@ await getDietsData();
   align-items: center;
   margin: 20px 60px;
 }
+
+@import '@/views/DietView/mediaDietView.scss';
 </style>

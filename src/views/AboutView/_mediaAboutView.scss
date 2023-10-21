@@ -1,0 +1,16 @@
+@media (min-width: 768px) {
+  .aboutview {
+    gap: 30px;
+
+    h1 {
+      font-size: 32px;
+    }
+  }
+}
+@media (min-width: 992px) {
+  .aboutview {
+    .card-container {
+      gap: 80px;
+    }
+  }
+}

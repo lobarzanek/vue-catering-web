@@ -48,8 +48,8 @@ defineProps({
   position: relative;
   display: flex;
   justify-content: center;
-  width: 350px;
-  height: 450px;
+  width: 300px;
+  height: 370px;
   border-radius: 10px;
   box-shadow: 2px 4px 10px 1px #01111170;
   overflow: hidden;
@@ -75,8 +75,8 @@ defineProps({
   .profile-img {
     position: absolute;
     top: 30%;
-    width: 180px;
-    height: 180px;
+    width: 150px;
+    aspect-ratio: 1;
     translate: 0 -50%;
     border-radius: 50%;
     border: 8px solid #fff;
@@ -94,11 +94,14 @@ defineProps({
     color: #fff;
     .name {
       font-weight: bold;
-      font-size: 36px;
+      font-size: 24px;
     }
     .description {
+      font-size: 14px;
       text-align: center;
     }
   }
 }
+
+@import "@/components/content/aboutpage/mediaAboutCard.scss";
 </style>

@@ -1,0 +1,55 @@
+@media (min-width: 768px) {
+  .itemCard {
+    flex-direction: row;
+
+    .imgBox {
+      margin-top: 0px;
+      img {
+        width: 160px;
+      }
+    }
+
+    .content {
+      .title {
+        margin-top: 20px;
+        justify-content: space-between;
+
+        .trash {
+          top: 0px;
+          right: 0px;
+          position: relative;
+          img {
+            width: 25px;
+          }
+        }
+      }
+    }
+  }
+}
+@media (min-width: 992px) {
+  .itemCard {
+    .imgBox {
+      img {
+        width: 220px;
+      }
+    }
+
+    .content {
+      .title {
+        span {
+          font-size: 26px;
+        }
+        .trash {
+          img {
+            width: 35px;
+          }
+        }
+      }
+      .price {
+        span {
+          font-size: 22px;
+        }
+      }
+    }
+  }
+}

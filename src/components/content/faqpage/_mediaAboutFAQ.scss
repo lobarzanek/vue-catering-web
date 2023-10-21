@@ -1,0 +1,21 @@
+@media (min-width: 768px){
+    .question{
+        height: 100px;
+        h3{
+            font-size: 1.8rem;
+        }
+    }
+
+    .answer{
+    p{
+        line-height: 1.7;
+        font-size: 1.4rem;
+    }
+}
+    .faq{
+        padding: 3px;
+        &:last-child{
+            margin-bottom: 5%;
+          }
+    }
+}

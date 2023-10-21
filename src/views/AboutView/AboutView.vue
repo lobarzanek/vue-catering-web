@@ -8,14 +8,19 @@ const data = ref([]);
 const eHandler = ref(true);
 
 async function getAboutUsData() {
-  axios.get("http://localhost:3000/aboutus").then((response) => {
-    if (response.statusText == "OK") {
-      eHandler.value = false;
-      data.value = response.data;
-    }
-  });
+  try{
+
+    await axios.get("http://localhost:3000/aboutus").then((response) => {
+      if (response.statusText == "OK") {
+        eHandler.value = false;
+        data.value = response.data;
+      }
+    });
+  }catch{
+    return
+  }
 }
-getAboutUsData();
+await getAboutUsData();
 </script>
 
 <template>
@@ -46,9 +51,10 @@ getAboutUsData();
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  gap: 30px;
+  gap: 20px;
   margin-top: 20px;
   h1 {
+    font-size: 24px;
     text-transform: uppercase;
   }
 
@@ -57,7 +63,8 @@ getAboutUsData();
     justify-content: center;
     align-items: center;
     flex-direction: row;
-    gap: 80px;
+    flex-wrap: wrap;
+    gap: 30px;
     margin-bottom: 40px;
   }
 }
@@ -67,4 +74,7 @@ getAboutUsData();
   align-items: center;
   margin: 20px 60px;
 }
+
+@import '@/views/AboutView/mediaAboutview.scss';
+
 </style>

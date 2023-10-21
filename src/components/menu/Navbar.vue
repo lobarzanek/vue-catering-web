@@ -1,31 +1,59 @@
 <script setup>
 import { RouterLink } from "vue-router";
 import NavbarItem from "@/components/menu/NavbarItem.vue";
+import { ref } from "vue";
 
 const cartIcon = "src/images/cart-svgrepo-com.svg";
 const userIcon = "src/images/user-svgrepo-com.svg";
+const menuIcon = "src/images/menu-svgrepo-com.svg";
+const isActive = ref(false);
+
+const showMenu = () => {
+  if (window.innerWidth < 768) {
+    isActive.value = !isActive.value;
+  } else {
+    isActive.value = false;
+  }
+};
 </script>
 <template>
-  <header>
+  <div class="navbar">
     <img class="logo" src="@/images/logo.svg" alt="" />
-    <div class="top-bar">
-      <RouterLink to="/" class="nav-link">Home</RouterLink>
-      <RouterLink to="/diet" class="nav-link">Diety</RouterLink>
-      <RouterLink to="/catering" class="nav-link">Catering</RouterLink>
-      <RouterLink to="/about-us" class="nav-link">O nas</RouterLink>
-      <RouterLink to="/faq" class="nav-link">FAQ</RouterLink>
-      <RouterLink to="/contact" class="nav-link">Kontakt</RouterLink>
+    <div class="top-bar" :class="{ active: isActive }">
+      <div class="wrapper">
+        <button @click="showMenu" class="closeBtn">X</button>
+      </div>
+      <RouterLink to="/" class="nav-link" @click="showMenu">Home</RouterLink>
+      <RouterLink to="/diet" class="nav-link" @click="showMenu"
+        >Diety</RouterLink
+      >
+      <RouterLink to="/catering" class="nav-link" @click="showMenu"
+        >Catering</RouterLink
+      >
+      <RouterLink to="/about-us" class="nav-link" @click="showMenu"
+        >O nas</RouterLink
+      >
+      <RouterLink to="/faq" class="nav-link" @click="showMenu">FAQ</RouterLink>
+      <RouterLink to="/contact" class="nav-link" @click="showMenu"
+        >Kontakt</RouterLink
+      >
     </div>
     <div class="items">
       <RouterLink to="/cart" class="nav-link"
         ><NavbarItem :iconSrc="cartIcon" :counter="true"></NavbarItem
       ></RouterLink>
-      <NavbarItem :iconSrc="userIcon"></NavbarItem>
+      <RouterLink to="/login" class="nav-link">
+        <NavbarItem :iconSrc="userIcon"></NavbarItem>
+      </RouterLink>
+      <button @click="showMenu" class="menuBtn">
+        <img :src="menuIcon" alt="" />
+      </button>
     </div>
-  </header>
+  </div>
 </template>
 <style scoped lang="scss">
-header {
+.navbar {
+  position: relative;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -33,42 +61,41 @@ header {
   background-color: white;
   box-shadow: 0 0 60px -24px rgba(66, 68, 90, 1);
   .logo {
-    width: 200px;
-    margin-left: 25px;
+    display: block;
+    width: 160px;
     flex-grow: 0.2;
   }
 
   .top-bar {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: nowrap;
-    font-size: 20px;
-    flex-grow: 4;
-    .nav-link {
-      color: gray;
-      text-decoration: none;
-      padding: 5px 10px;
-      border-radius: 5px;
-      margin: 0 10px;
-      transition: background-color 0.1s ease-in-out, color 0.1s ease-in-out;
-
-      &:hover,
-      &.active-route {
-        background-color: #26ad60;
-        color: white;
-        cursor: pointer;
-      }
-    }
+    display: none;
   }
   .items {
     display: flex;
-    justify-content: center;
+    justify-content: space-evenly;
     align-items: center;
     flex-direction: row;
     flex-wrap: nowrap;
-    flex-grow: 0.2;
     gap: 15px;
   }
+  .menuBtn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 30px;
+    width: 30px;
+    border-radius: 50%;
+    background-color: #d8d8d8;
+    border: none;
+
+    &:hover {
+      cursor: pointer;
+      background-color: #a1a1a1;
+    }
+    img {
+      width: 20px;
+    }
+  }
 }
+
+@import "@/components/menu/_mediaNavbar.scss";
 </style>

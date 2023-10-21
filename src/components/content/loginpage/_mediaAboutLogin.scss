@@ -1,0 +1,33 @@
+@media (min-width: 768px) {
+    .mainForm {
+        width: 500px;
+        height: 450px;
+    }
+    .form {
+        width: 400px;
+        height: 450px;
+        margin: auto;
+        padding: 20px;
+    }
+
+    .login,
+    .password
+     {
+        width: 350px;
+        height: 50px;
+    }
+    label{
+        font-size: 20px;
+    }
+    .log-in{
+        height: 45px;
+        font-size: 14px;
+    }
+    .register{
+        height: 45px;
+        font-size: 14px;
+    }
+    .buttons{
+        width:350px;
+    }
+}

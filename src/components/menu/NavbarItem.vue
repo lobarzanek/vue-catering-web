@@ -33,8 +33,8 @@ const store = useCounterStore();
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 40px;
-  width: 40px;
+  height: 30px;
+  width: 30px;
   border-radius: 50%;
   background-color: #d8d8d8;
 
@@ -43,24 +43,24 @@ const store = useCounterStore();
     background-color: #a1a1a1;
   }
   img {
-    width: 24px;
-    filter: invert(0%) sepia(98%) saturate(9%) hue-rotate(160deg)
-      brightness(94%) contrast(103%);
+    width: 18px;
   }
 
   .counter {
     position: absolute;
     right: -5px;
     top: -5px;
-    width: 18px;
-    height: 18px;
+    width: 16px;
+    height: 16px;
     border-radius: 50%;
     background-color: red;
     text-align: center;
-    font-size: 12px;
-    line-height: 18px;
+    font-size: 10px;
+    line-height: 16px;
     color: #fff;
     font-weight: bold;
   }
 }
+
+@import "@/components/menu/_mediaNavbarItem.scss";
 </style>

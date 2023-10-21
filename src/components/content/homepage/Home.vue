@@ -1,5 +1,4 @@
 <script setup>
-import { RouterLink } from "vue-router";
 
 defineProps({
   id: {
@@ -44,14 +43,17 @@ align-items: center;
 text-align: center;
 padding: 10px;
 width: 280px;
-float: left;
-margin-left: 85px;
+overflow: hidden;
+h1{
+  font-size: 26px;
+  padding-bottom: 5px;
+}
 }
 .card{
 opacity: 50%;
 transition: 1s;
-width: 255px;
-height: 270px;
+width: 180px;
+height: 195px;
 border: 1px groove black;
 border-radius: 10%;
 
@@ -60,4 +62,7 @@ border-radius: 10%;
   transition: 500ms;
 }
 }
+
+@import "@/components/content/homepage/mediaAboutHome.scss";
+
 </style>
