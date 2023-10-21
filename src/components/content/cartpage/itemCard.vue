@@ -81,20 +81,22 @@ const trashFunction = (e, count) => {
   display: flex;
   align-items: center;
   justify-content: center;
+  flex-direction: column;
   width: 60vw;
   border-radius: 10px;
   box-shadow: 2px 4px 10px 1px #01111170;
   overflow: hidden;
 
   .imgBox {
+    margin-top: 20px;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
 
     img {
-      width: 220px;
-      padding: 20px;
+      width: 160px;
+      padding: 10px;
     }
 
     .numberPicker {
@@ -102,7 +104,7 @@ const trashFunction = (e, count) => {
       align-items: center;
       justify-content: center;
       flex-direction: row;
-      margin: 20px;
+      margin: 10px 20px 20px;
       border-radius: 6px;
       overflow: hidden;
       box-shadow: 2px 4px 6px 1px #01111170;
@@ -150,26 +152,30 @@ const trashFunction = (e, count) => {
     flex-direction: column;
     width: 100%;
     height: 100%;
-    padding: 20px;
+    padding: 0 20px 20px;
     gap: 20px;
 
     .title {
+      position: relative;
       display: flex;
       align-items: center;
-      justify-content: space-between;
+      justify-content: center;
       flex-direction: row;
       width: 100%;
       span {
-        font-size: 28px;
+        font-size: 20px;
         font-weight: bold;
       }
 
       .trash {
+        position: absolute;
+        top: -230px;
+        right: -10px;
         border: none;
         background-color: transparent;
         transition: rotate 0.1s ease-in-out;
         img {
-          width: 35px;
+          width: 30px;
           aspect-ratio: 1;
         }
         &:hover {
@@ -182,9 +188,9 @@ const trashFunction = (e, count) => {
 
     textarea {
       width: 100%;
-      height: 150px;
+      height: 100px;
       padding: 10px;
-      font-size: 18px;
+      font-size: 16px;
       border: none;
       border-radius: 10px;
       box-shadow: 2px 4px 6px 1px #01111170;
@@ -196,10 +202,12 @@ const trashFunction = (e, count) => {
       justify-content: end;
 
       span {
-        font-size: 24px;
+        font-size: 18px;
         font-weight: bold;
       }
     }
   }
 }
+
+@import "@/components/content/cartpage/_mediaItemCard.scss";
 </style>

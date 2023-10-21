@@ -12,10 +12,15 @@
   display: flex;
   align-items: center;
   justify-content: space-evenly;
+  text-align: center;
   flex-direction: column;
   flex-grow: 5.5;
   border-radius: 10px;
+  padding: 30px;
   box-shadow: 2px 4px 10px 1px #01111170;
   margin: 0 20px;
+  gap: 20px;
 }
+
+
 </style>

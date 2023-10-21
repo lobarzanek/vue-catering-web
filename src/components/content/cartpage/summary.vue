@@ -53,13 +53,13 @@ getSummaryPrice();
   display: flex;
   flex-direction: column;
   justify-content: start;
-  width: 100%;
-  margin: 0 30px;
+  width: 60vw;
+  margin: auto;
   gap: 20px;
 
   .title {
     width: 100%;
-    font-size: 24px;
+    font-size: 20px;
     font-weight: bold;
     text-align: center;
     padding: 10px;
@@ -74,9 +74,8 @@ getSummaryPrice();
     tr {
       th,
       td {
-        font-size: 20px;
-
-        padding: 5px 10px;
+        font-size: 14px;
+        padding: 5px 5px;
         text-align: left;
       }
     }
@@ -97,7 +96,7 @@ getSummaryPrice();
     background-color: #26ad60;
     box-shadow: 2px 2px 4px 1px #01111170;
     color: #fff;
-    font-size: 18px;
+    font-size: 16px;
     font-weight: bold;
     transition: 0.3 easy background-color;
 
@@ -107,4 +106,6 @@ getSummaryPrice();
     }
   }
 }
+
+@import "@/components/content/cartpage/_mediaSummary.scss";
 </style>

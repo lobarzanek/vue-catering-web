@@ -1,0 +1,26 @@
+@media (min-width: 768px) {
+  .summaryContainer {
+    margin: auto;
+    .title {
+      font-size: 24px;
+    }
+    .dataBox {
+      tr {
+        th,
+        td {
+          font-size: 20px;
+          padding: 5px 10px;
+        }
+      }
+    }
+    button {
+      font-size: 18px;
+    }
+  }
+}
+@media (min-width: 992px) {
+  .summaryContainer {
+    width: 100%;
+    margin: 0 30px;
+  }
+}
