@@ -3,6 +3,7 @@ import { ref } from "vue";
 import axios from "axios";
 import DietCard from "@/components/content/dietpage/DietCard.vue";
 import ErrorHandler from "@/components/content/errorHandler/ErrorHandler.vue";
+import { useToast } from "vue-toastification";
 
 const data = ref([]);
 const eHandler = ref(true);
@@ -20,6 +21,7 @@ const getDietsData = async () => {
   }
 };
 await getDietsData();
+
 </script>
 
 <template>

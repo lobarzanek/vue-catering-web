@@ -1,4 +1,5 @@
 <script setup>
+import { useToast } from "vue-toastification";
 import { useCounterStore } from "@/stores/counter";
 const counter = useCounterStore();
 
@@ -36,6 +37,7 @@ defineProps({
     default: () => "",
   },
 });
+
 </script>
 
 <template>
@@ -48,19 +50,16 @@ defineProps({
       Cena: <span class="price"> {{ price }} {{ currency }} / dzień </span>
     </div>
     <button
-      @click="
-        () =>
-          counter.addToCart({
-            id: id,
-            title: title,
-            description: description,
-            mealsCount: mealsCount,
-            price: price,
-            currency: currency,
-            imgSrc: imgSrc,
-            imgAlt: imgAlt,
-          })
-      "
+      @click="() =>            counter.addToCart({
+        id: id,
+        title: title,
+        description: description,
+        mealsCount: mealsCount,
+        price: price,
+        currency: currency,
+        imgSrc: imgSrc,
+        imgAlt: imgAlt,
+      })"
       class="btn-add"
     >
       Dodaj do koszyka
